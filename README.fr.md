@@ -195,8 +195,8 @@ Rafraîchir tous les 3 à 6 mois. La détection ASN de CF n'est pas affectée ; 
 3. **Ne placez pas ce domaine sur un site web normal** — la liste blanche est très restrictive ; les requêtes web ordinaires seront redirigées en 302
 4. **Limites du palier gratuit** :
    - CF Worker : 100 000 requêtes/jour
-   - Vercel : 100 Go de bande passante/mois
-   - Netlify : 100 Go de bande passante/mois
+   - Vercel : 100 Go de trafic/mois
+   - Netlify : 100 Go de trafic/mois
    - Deno Deploy : 1 million de requêtes/mois
 
 ---

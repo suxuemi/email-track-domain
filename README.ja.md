@@ -195,8 +195,8 @@ deno run --allow-net --allow-env main.js   # :8000 で起動
 3. **通常の Web サービスを提供するドメインに設置しないこと** — パス許可リストが非常に狭いため、通常の Web リクエストは 302 されます
 4. **無料枠**:
    - CF Worker: 10 万リクエスト/日
-   - Vercel: 100GB 帯域/月
-   - Netlify: 100GB 帯域/月
+   - Vercel: 100GB 転送量/月
+   - Netlify: 100GB 転送量/月
    - Deno Deploy: 100 万リクエスト/月
 
 ---

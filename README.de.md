@@ -195,8 +195,8 @@ Alle 3–6 Monate aktualisieren. CFs ASN-basierte Erkennung ist nicht betroffen;
 3. **Setzen Sie diese Domain nicht auf einer regulären Website ein** — die Pfad-Whitelist ist sehr eng; normale Web-Anfragen werden mit 302 weitergeleitet
 4. **Kostenlose Kontingente**:
    - CF Worker: 100.000 Anfragen/Tag
-   - Vercel: 100 GB Bandbreite/Monat
-   - Netlify: 100 GB Bandbreite/Monat
+   - Vercel: 100 GB Traffic/Monat
+   - Netlify: 100 GB Traffic/Monat
    - Deno Deploy: 1 Mio. Anfragen/Monat
 
 ---

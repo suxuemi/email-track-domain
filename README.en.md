@@ -195,8 +195,8 @@ Refresh every 3-6 months. CF's ASN-based detection is unaffected; the other thre
 3. **Do not put this on a domain serving a regular website** — the path allowlist is very narrow; ordinary web requests get 302'd
 4. **Free tier limits**:
    - CF Worker: 100k requests/day
-   - Vercel: 100GB bandwidth/month
-   - Netlify: 100GB bandwidth/month
+   - Vercel: 100GB traffic/month
+   - Netlify: 100GB traffic/month
    - Deno Deploy: 1M requests/month
 
 ---

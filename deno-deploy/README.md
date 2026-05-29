@@ -46,10 +46,10 @@ curl -I http://localhost:8000/test.php   # 应返回 302
 | L2 检测精度 | ASN（高） | IP 段（中） | IP 段（中） | **IP 段（中）** |
 | 代码语法 | Worker Module | Edge Function | Edge Function | **Deno.serve()** |
 | 一键部署按钮 | 官方 | 官方 | 官方 | **GitHub 集成（1 步手动）** |
-| 免费额度 | 100K req/天 | 100GB 带宽 | 100GB 带宽 | **100 万次/月** |
+| 免费额度 | 100K req/天 | 100GB 流量 | 100GB 流量 | **100 万次/月** |
 | 域名灵活度 | NS 锁 CF | CNAME 任意 | CNAME 任意 | **CNAME 任意** |
 
 Deno Deploy 的优势：
 - 代码语法**最接近原始 Cloudflare Worker**（`addEventListener('fetch', ...)` 也支持）
-- 免费额度最宽松（按请求次数计，不按带宽）
+- 免费额度最宽松（按请求次数计，不按流量）
 - 全球边缘节点最多

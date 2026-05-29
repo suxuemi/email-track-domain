@@ -195,8 +195,8 @@ deno run --allow-net --allow-env main.js   # 本地起在 :8000
 3. **不要把这个域名挂在做正常 web 服务的域名上** — 路径白名单非常窄，正常 web 请求都会被 302 走
 4. **免费额度**：
    - CF Worker：10 万次/天
-   - Vercel：100GB 带宽/月
-   - Netlify：100GB 带宽/月
+   - Vercel：100GB 流量/月
+   - Netlify：100GB 流量/月
    - Deno Deploy：100 万次/月
 
 ---

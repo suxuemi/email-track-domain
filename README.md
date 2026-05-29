@@ -2,6 +2,8 @@
 
 > 一键部署你专属的邮件追踪域名反代。在自己的域名下提供邮件打开/点击追踪能力，避免共享域名被反垃圾系统识别。
 
+**Language**: **简体中文** · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+
 ## 一键部署（四个平台任选）
 
 | 平台 | 按钮 | L2 反扫描 | 域名灵活度 |
@@ -203,6 +205,15 @@ deno run --allow-net --allow-env main.js   # 本地起在 :8000
 
 MIT — 见 [LICENSE](LICENSE)。
 
+---
+
+## 联系作者
+
+- 🌐 官网：[laifa.xin](https://laifa.xin)
+- 💬 微信咨询（添加请备注「email track」）：
+
+<img src="https://cos.files.maozhishi.com/data/web/web-files/wx/tony-apan.png" alt="作者微信" width="240">
+
 ## 致谢
 
-源自「来发信谷歌地图数据采集专业版」项目的邮件追踪基础设施，公开发布以便用户自部署专属追踪域名。
+源自 [来发信](https://laifa.xin) 的邮件追踪基础设施，公开发布以便用户自部署专属追踪域名。

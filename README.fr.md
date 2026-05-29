@@ -80,6 +80,18 @@ Empreinte réseau (selon la plateforme)
 
 ---
 
+## Types de suivi pris en charge
+
+| Type | Mise en œuvre | Exemples de chemins |
+|---|---|---|
+| Suivi des ouvertures d'email | Pixel transparent 1×1 | `/img/p.png?id=xxx`, `/track/open.gif` |
+| Suivi des clics sur les liens | Redirection 302 vers l'URL d'origine | `/r/abc123`, `/l/xxx`, `/link/xxx` |
+| **Suivi des téléchargements de pièces jointes** | Proxy inverse du flux de fichier | `/att/xxx.pdf`, `/attachment/file` |
+
+Les trois types **partagent la même logique de proxy inverse** — le suivi des pièces jointes fonctionne dès l'installation sans configuration supplémentaire. Le Worker transfère les requêtes vers votre backend ; votre backend enregistre l'événement et renvoie le fichier/pixel/302.
+
+---
+
 ## Configuration
 
 | Variable | Valeur par défaut | Description |

@@ -80,6 +80,18 @@ Impressão de rede (por plataforma)
 
 ---
 
+## Tipos de rastreamento suportados
+
+| Tipo | Implementação | Exemplos de caminhos |
+|---|---|---|
+| Rastreamento de abertura de email | Pixel transparente 1×1 | `/img/p.png?id=xxx`, `/track/open.gif` |
+| Rastreamento de cliques em links | Redirecionamento 302 para a URL original | `/r/abc123`, `/l/xxx`, `/link/xxx` |
+| **Rastreamento de download de anexos** | Proxy reverso do fluxo de arquivo | `/att/xxx.pdf`, `/attachment/file` |
+
+Os três tipos **compartilham a mesma lógica de proxy reverso** — o rastreamento de anexos funciona imediatamente sem configuração adicional. O Worker encaminha as requisições para o seu backend; seu backend registra o evento e retorna o arquivo/pixel/302.
+
+---
+
 ## Configuração
 
 | Variável | Padrão | Descrição |

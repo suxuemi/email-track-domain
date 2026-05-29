@@ -80,6 +80,18 @@ Network fingerprint (platform-specific)
 
 ---
 
+## Supported tracking types
+
+| Type | Implementation | Example paths |
+|---|---|---|
+| Email open tracking | 1×1 transparent pixel | `/img/p.png?id=xxx`, `/track/open.gif` |
+| Link click tracking | 302 redirect to original URL | `/r/abc123`, `/l/xxx`, `/link/xxx` |
+| **Attachment download tracking** | Reverse-proxy the file stream | `/att/xxx.pdf`, `/attachment/file` |
+
+All three types **share the same reverse-proxy logic** — attachment tracking works out of the box with zero extra configuration. The Worker forwards requests to your backend; your backend records the event and streams back the file/pixel/302.
+
+---
+
 ## Configuration
 
 | Variable | Default | Description |

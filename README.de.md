@@ -80,6 +80,18 @@ Netzwerk-Fingerprint (plattformspezifisch)
 
 ---
 
+## Unterstützte Tracking-Typen
+
+| Typ | Implementierung | Beispielpfade |
+|---|---|---|
+| E-Mail-Öffnungs-Tracking | 1×1 transparentes Pixel | `/img/p.png?id=xxx`, `/track/open.gif` |
+| Link-Klick-Tracking | 302-Redirect zur Original-URL | `/r/abc123`, `/l/xxx`, `/link/xxx` |
+| **Anhang-Download-Tracking** | Reverse-Proxy des Datei-Streams | `/att/xxx.pdf`, `/attachment/file` |
+
+Alle drei Typen **teilen dieselbe Reverse-Proxy-Logik** — Anhang-Tracking funktioniert sofort ohne zusätzliche Konfiguration. Der Worker leitet Anfragen an Ihr Backend weiter; Ihr Backend erfasst das Ereignis und sendet Datei/Pixel/302 zurück.
+
+---
+
 ## Konfiguration
 
 | Variable | Standard | Beschreibung |

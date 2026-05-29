@@ -80,6 +80,18 @@ Huella de red (según plataforma)
 
 ---
 
+## Tipos de seguimiento soportados
+
+| Tipo | Implementación | Ejemplos de rutas |
+|---|---|---|
+| Seguimiento de aperturas de email | Píxel transparente 1×1 | `/img/p.png?id=xxx`, `/track/open.gif` |
+| Seguimiento de clics en enlaces | Redirección 302 a la URL original | `/r/abc123`, `/l/xxx`, `/link/xxx` |
+| **Seguimiento de descargas de adjuntos** | Proxy inverso del flujo de archivo | `/att/xxx.pdf`, `/attachment/file` |
+
+Los tres tipos **comparten la misma lógica de proxy inverso** — el seguimiento de adjuntos funciona de inmediato sin configuración adicional. El Worker reenvía las peticiones a tu backend; tu backend registra el evento y devuelve el archivo/píxel/302.
+
+---
+
 ## Configuración
 
 | Variable | Por defecto | Descripción |

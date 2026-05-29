@@ -90,8 +90,6 @@
 
 **IP レンジフォールバックについて**: Vercel/Netlify/Deno は ASN にアクセスできないため、Microsoft IP レンジ（EOP outbound + Microsoft 365 services + MS Corp 歴史レンジ）をハードコードして照合します。ASN より若干精度は劣り、3〜6 ヶ月ごとに更新が必要です。
 
-> 歴史的背景: 元のソースコードのコメントは ASN 8075 を Google としていましたが、**これは誤りです**。8075 は実際には MICROSOFT-CORP-MSN-AS-BLOCK であり、Surface Pro は Microsoft のデバイスです。本リポジトリでは修正済みです。
-
 ---
 
 ## サポートされる追跡タイプ

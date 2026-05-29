@@ -90,8 +90,6 @@ Impressão de rede (por plataforma)
 
 **Sobre a alternativa por faixas IP**: Vercel/Netlify/Deno não conseguem acessar o ASN, então usamos faixas IP da Microsoft codificadas (EOP outbound + Microsoft 365 services + faixas históricas da MS Corp). A precisão é ligeiramente menor que o ASN; as faixas precisam ser atualizadas a cada 3-6 meses.
 
-> Nota histórica: o comentário do código-fonte original dizia que o ASN 8075 era Google — **isso está incorreto**. 8075 corresponde na verdade a MICROSOFT-CORP-MSN-AS-BLOCK; Surface Pro é um dispositivo Microsoft. Este repositório corrige o comentário.
-
 ---
 
 ## Tipos de rastreamento suportados

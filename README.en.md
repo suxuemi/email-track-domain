@@ -90,8 +90,6 @@ Network fingerprint (platform-specific)
 
 **About the IP-range fallback**: Vercel/Netlify/Deno cannot access ASN, so we use hard-coded Microsoft IP ranges (EOP outbound + Microsoft 365 services + MS Corp historical ranges). Accuracy is slightly lower than ASN; ranges need to be refreshed every 3-6 months.
 
-> Historical note: the original source code comment said ASN 8075 was Google — **this is wrong**. 8075 is actually MICROSOFT-CORP-MSN-AS-BLOCK; Surface Pro is a Microsoft device. This repo fixes the comment.
-
 ---
 
 ## Supported tracking types

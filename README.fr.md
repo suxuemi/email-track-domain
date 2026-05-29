@@ -90,8 +90,6 @@ Empreinte réseau (selon la plateforme)
 
 **À propos du repli par plages IP** : Vercel/Netlify/Deno n'ont pas accès à l'ASN, donc nous utilisons des plages IP Microsoft codées en dur (EOP outbound + Microsoft 365 services + plages historiques MS Corp). La précision est légèrement inférieure à l'ASN ; les plages doivent être rafraîchies tous les 3 à 6 mois.
 
-> Note historique : le commentaire du code source d'origine indiquait que l'ASN 8075 était Google — **c'est faux**. 8075 correspond en réalité à MICROSOFT-CORP-MSN-AS-BLOCK ; Surface Pro est un appareil Microsoft. Ce dépôt corrige le commentaire.
-
 ---
 
 ## Types de suivi pris en charge

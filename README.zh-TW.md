@@ -90,8 +90,6 @@
 
 **關於 IP 段備援**:Vercel/Netlify/Deno 拿不到 ASN,所以用硬編碼的 Microsoft IP 段(EOP outbound + Microsoft 365 services + MS Corp 歷史段)做比對。精準度比 ASN 略低,IP 段每 3-6 個月需同步一次。
 
-> 歷史背景:原始碼註解寫 ASN 8075 是 Google,**這是錯的**。8075 實際是 MICROSOFT-CORP-MSN-AS-BLOCK;Surface Pro 是微軟裝置。本倉庫已修正。
-
 ---
 
 ## 支援的追蹤類型

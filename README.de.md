@@ -90,8 +90,6 @@ Netzwerk-Fingerprint (plattformspezifisch)
 
 **Zum IP-Bereich-Fallback**: Vercel/Netlify/Deno haben keinen Zugriff auf die ASN, daher verwenden wir hartkodierte Microsoft IP-Bereiche (EOP outbound + Microsoft 365 services + historische MS-Corp-Bereiche). Die Genauigkeit liegt leicht unter ASN; die Bereiche müssen alle 3–6 Monate aktualisiert werden.
 
-> Historische Anmerkung: Der Kommentar im ursprünglichen Quellcode bezeichnete ASN 8075 als Google — **das ist falsch**. 8075 entspricht tatsächlich MICROSOFT-CORP-MSN-AS-BLOCK; Surface Pro ist ein Microsoft-Gerät. Dieses Repository korrigiert den Kommentar.
-
 ---
 
 ## Unterstützte Tracking-Typen

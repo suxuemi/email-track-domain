@@ -90,8 +90,6 @@ Huella de red (según plataforma)
 
 **Sobre la alternativa por rangos IP**: Vercel/Netlify/Deno no pueden acceder al ASN, así que usamos rangos IP de Microsoft codificados (EOP outbound + Microsoft 365 services + rangos históricos de MS Corp). La precisión es ligeramente menor que ASN; los rangos deben refrescarse cada 3-6 meses.
 
-> Nota histórica: el comentario del código fuente original decía que el ASN 8075 era Google — **esto es incorrecto**. 8075 corresponde en realidad a MICROSOFT-CORP-MSN-AS-BLOCK; Surface Pro es un dispositivo Microsoft. Este repositorio corrige el comentario.
-
 ---
 
 ## Tipos de seguimiento soportados

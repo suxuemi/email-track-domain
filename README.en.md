@@ -1,8 +1,21 @@
-# Email Tracking Domain (One-Click Deploy)
+<div align="center">
 
-> Deploy your own email tracking domain reverse proxy in one click. Serve open/click tracking under your own domain to avoid the reputation damage of shared tracking domains.
+# Email Tracking Domain
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · **English** · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
+**One-click email tracking domain reverse proxy — opens, clicks & attachments on your own domain**
+
+![platforms](https://img.shields.io/badge/platforms-Cloudflare%20%7C%20Vercel%20%7C%20Netlify%20%7C%20Deno-orange?style=flat-square)
+![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+![i18n](https://img.shields.io/badge/i18n-8%20languages-blue?style=flat-square)
+![stars](https://img.shields.io/github/stars/suxuemi/email-track-domain?style=flat-square&logo=github)
+
+🌐 **Official Website**: [laifa.xin](https://laifa.xin)
+
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | **English** | [日本語](README.ja.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português](README.pt.md)
+
+</div>
+
+---
 
 ## One-Click Deploy (pick any of four platforms)
 

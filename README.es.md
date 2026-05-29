@@ -1,8 +1,21 @@
-# Email Tracking Domain (Despliegue en un clic)
+<div align="center">
 
-> Despliega tu propio proxy inverso de dominio de seguimiento de emails con un clic. Ofrece seguimiento de aperturas/clics bajo tu propio dominio y evita el daño reputacional de los dominios de seguimiento compartidos.
+# Email Tracking Domain
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · **Español** · [Português](README.pt.md)
+**Proxy inverso de dominio de seguimiento de email en un clic — aperturas, clics y adjuntos bajo tu propio dominio**
+
+![platforms](https://img.shields.io/badge/platforms-Cloudflare%20%7C%20Vercel%20%7C%20Netlify%20%7C%20Deno-orange?style=flat-square)
+![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+![i18n](https://img.shields.io/badge/i18n-8%20languages-blue?style=flat-square)
+![stars](https://img.shields.io/github/stars/suxuemi/email-track-domain?style=flat-square&logo=github)
+
+🌐 **Sitio oficial**: [laifa.xin](https://laifa.xin)
+
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [日本語](README.ja.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | **Español** | [Português](README.pt.md)
+
+</div>
+
+---
 
 ## Despliegue en un clic (cuatro plataformas a elegir)
 

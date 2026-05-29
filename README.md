@@ -1,8 +1,21 @@
-# Email Tracking Domain（邮件追踪域名一键部署）
+<div align="center">
 
-> 一键部署你专属的邮件追踪域名反代。在自己的域名下提供邮件打开/点击追踪能力，避免共享域名被反垃圾系统识别。
+# Email Tracking Domain
 
-**Language**: **简体中文** · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
+**邮件追踪域名一键部署 — 专属域名下的打开 / 点击 / 附件追踪反代**
+
+![platforms](https://img.shields.io/badge/platforms-Cloudflare%20%7C%20Vercel%20%7C%20Netlify%20%7C%20Deno-orange?style=flat-square)
+![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+![i18n](https://img.shields.io/badge/i18n-8%20languages-blue?style=flat-square)
+![stars](https://img.shields.io/github/stars/suxuemi/email-track-domain?style=flat-square&logo=github)
+
+🌐 **官方网站**：[laifa.xin](https://laifa.xin)
+
+**简体中文** | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [日本語](README.ja.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português](README.pt.md)
+
+</div>
+
+---
 
 ## 一键部署（四个平台任选）
 

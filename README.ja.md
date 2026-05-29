@@ -1,8 +1,21 @@
-# Email Tracking Domain（メール追跡ドメインのワンクリックデプロイ）
+<div align="center">
 
-> 専用のメール追跡ドメインリバースプロキシをワンクリックでデプロイ。自分のドメイン配下で開封/クリック追跡を提供し、共有追跡ドメインが迷惑メール判定されるリスクを回避します。
+# Email Tracking Domain
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · **日本語** · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
+**メール追跡ドメインのワンクリックデプロイ — 専用ドメインでの開封 / クリック / 添付追跡リバースプロキシ**
+
+![platforms](https://img.shields.io/badge/platforms-Cloudflare%20%7C%20Vercel%20%7C%20Netlify%20%7C%20Deno-orange?style=flat-square)
+![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+![i18n](https://img.shields.io/badge/i18n-8%20languages-blue?style=flat-square)
+![stars](https://img.shields.io/github/stars/suxuemi/email-track-domain?style=flat-square&logo=github)
+
+🌐 **公式サイト**：[laifa.xin](https://laifa.xin)
+
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | **日本語** | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português](README.pt.md)
+
+</div>
+
+---
 
 ## ワンクリックデプロイ（4 つのプラットフォームから選択）
 

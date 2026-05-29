@@ -2,7 +2,7 @@
 
 > Deploy your own email tracking domain reverse proxy in one click. Serve open/click tracking under your own domain to avoid the reputation damage of shared tracking domains.
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · **English** · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · **English** · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 ## One-Click Deploy (pick any of four platforms)
 

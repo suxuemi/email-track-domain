@@ -1,6 +1,6 @@
 # 绑定自定义域名
 
-**Language**: **简体中文** · [繁體中文](custom-domain.zh-TW.md) · [English](custom-domain.en.md) · [日本語](custom-domain.ja.md) · [Français](custom-domain.fr.md) · [Deutsch](custom-domain.de.md)
+**Language**: **简体中文** · [繁體中文](custom-domain.zh-TW.md) · [English](custom-domain.en.md) · [日本語](custom-domain.ja.md) · [Français](custom-domain.fr.md) · [Deutsch](custom-domain.de.md) · [Español](custom-domain.es.md) · [Português](custom-domain.pt.md)
 
 部署完成后，需要把你的域名指向部署平台，邮件追踪链接才会用你自己的域名。
 

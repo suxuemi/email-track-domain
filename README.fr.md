@@ -2,7 +2,7 @@
 
 > Déployez votre propre proxy inverse pour domaine de suivi d'emails en un clic. Servez le suivi des ouvertures/clics sous votre propre domaine et évitez la dégradation de réputation des domaines de suivi partagés.
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · **Français** · [Deutsch](README.de.md)
+**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · **Français** · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 ## Déploiement en un clic (quatre plateformes au choix)
 

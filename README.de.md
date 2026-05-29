@@ -2,7 +2,7 @@
 
 > Stellen Sie Ihren eigenen Reverse-Proxy für E-Mail-Tracking-Domains mit einem Klick bereit. Bieten Sie Öffnungs-/Klick-Tracking unter Ihrer eigenen Domain an und vermeiden Sie den Reputationsschaden geteilter Tracking-Domains.
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · **Deutsch**
+**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · **Deutsch** · [Español](README.es.md) · [Português](README.pt.md)
 
 ## Ein-Klick-Deployment (vier Plattformen zur Auswahl)
 

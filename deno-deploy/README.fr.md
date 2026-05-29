@@ -1,6 +1,6 @@
 # Déploiement Deno Deploy
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · **Français** · [Deutsch](README.de.md)
+**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · **Français** · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 Deno Deploy n'a pas de « bouton de déploiement en un clic » au niveau URL, mais son intégration GitHub est presque équivalente — configurez-la une fois, puis chaque push déploie automatiquement.
 

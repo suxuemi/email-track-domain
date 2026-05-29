@@ -1,6 +1,6 @@
 # Bind a Custom Domain
 
-**Language**: [简体中文](custom-domain.md) · [繁體中文](custom-domain.zh-TW.md) · **English** · [日本語](custom-domain.ja.md) · [Français](custom-domain.fr.md) · [Deutsch](custom-domain.de.md)
+**Language**: [简体中文](custom-domain.md) · [繁體中文](custom-domain.zh-TW.md) · **English** · [日本語](custom-domain.ja.md) · [Français](custom-domain.fr.md) · [Deutsch](custom-domain.de.md) · [Español](custom-domain.es.md) · [Português](custom-domain.pt.md)
 
 After deploying, you need to point your own domain at the deployment platform so that email tracking links use your own domain.
 

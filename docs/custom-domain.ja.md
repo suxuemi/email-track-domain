@@ -1,6 +1,6 @@
 # カスタムドメインのバインド
 
-**Language**: [简体中文](custom-domain.md) · [繁體中文](custom-domain.zh-TW.md) · [English](custom-domain.en.md) · **日本語** · [Français](custom-domain.fr.md) · [Deutsch](custom-domain.de.md)
+**Language**: [简体中文](custom-domain.md) · [繁體中文](custom-domain.zh-TW.md) · [English](custom-domain.en.md) · **日本語** · [Français](custom-domain.fr.md) · [Deutsch](custom-domain.de.md) · [Español](custom-domain.es.md) · [Português](custom-domain.pt.md)
 
 デプロイ後、自分のドメインをデプロイプラットフォームに向ける必要があります。これによりメール追跡リンクで自分のドメインを使えるようになります。
 

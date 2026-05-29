@@ -2,7 +2,7 @@
 
 > 一鍵部署你專屬的郵件追蹤網域反向代理。在自己的網域下提供郵件開信/點擊追蹤能力，避免共享網域被反垃圾系統識別。
 
-**Language**: [简体中文](README.md) · **繁體中文** · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+**Language**: [简体中文](README.md) · **繁體中文** · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 ## 一鍵部署(四個平台任選)
 

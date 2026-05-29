@@ -1,6 +1,6 @@
 # Déploiement Vercel
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · **Français** · [Deutsch](README.de.md)
+**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · **Français** · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 Filtrage à quatre niveaux complet. L'anti-scanner L2 Microsoft Defender SafeLinks utilise la correspondance de plages IP au lieu de la détection ASN native de CF — précision légèrement inférieure (les plages IP doivent être rafraîchies tous les quelques mois), mais suffisant.
 

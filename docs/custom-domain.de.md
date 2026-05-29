@@ -1,6 +1,6 @@
 # Eigene Domain binden
 
-**Language**: [简体中文](custom-domain.md) · [繁體中文](custom-domain.zh-TW.md) · [English](custom-domain.en.md) · [日本語](custom-domain.ja.md) · [Français](custom-domain.fr.md) · **Deutsch**
+**Language**: [简体中文](custom-domain.md) · [繁體中文](custom-domain.zh-TW.md) · [English](custom-domain.en.md) · [日本語](custom-domain.ja.md) · [Français](custom-domain.fr.md) · **Deutsch** · [Español](custom-domain.es.md) · [Português](custom-domain.pt.md)
 
 Nach dem Deployment müssen Sie Ihre eigene Domain auf die Deployment-Plattform zeigen lassen, damit E-Mail-Tracking-Links Ihre eigene Domain verwenden.
 

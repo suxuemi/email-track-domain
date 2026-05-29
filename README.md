@@ -2,7 +2,7 @@
 
 > 一键部署你专属的邮件追踪域名反代。在自己的域名下提供邮件打开/点击追踪能力，避免共享域名被反垃圾系统识别。
 
-**Language**: **简体中文** · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+**Language**: **简体中文** · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 ## 一键部署（四个平台任选）
 

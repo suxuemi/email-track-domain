@@ -1,6 +1,6 @@
 # Lier un domaine personnalisé
 
-**Language**: [简体中文](custom-domain.md) · [繁體中文](custom-domain.zh-TW.md) · [English](custom-domain.en.md) · [日本語](custom-domain.ja.md) · **Français** · [Deutsch](custom-domain.de.md)
+**Language**: [简体中文](custom-domain.md) · [繁體中文](custom-domain.zh-TW.md) · [English](custom-domain.en.md) · [日本語](custom-domain.ja.md) · **Français** · [Deutsch](custom-domain.de.md) · [Español](custom-domain.es.md) · [Português](custom-domain.pt.md)
 
 Après le déploiement, vous devez pointer votre propre domaine vers la plateforme de déploiement pour que les liens de suivi d'emails utilisent votre propre domaine.
 

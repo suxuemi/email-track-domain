@@ -1,6 +1,6 @@
 # Vercel 部署
 
-**Language**: [简体中文](README.md) · **繁體中文** · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+**Language**: [简体中文](README.md) · **繁體中文** · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 四層過濾完整。L2 反 Microsoft Defender SafeLinks 掃描器用 IP 段比對代替 CF 原生 ASN 檢測——精準度略低(IP 段每隔幾個月要更新一次),但夠用。
 

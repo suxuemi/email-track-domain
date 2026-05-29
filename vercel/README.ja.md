@@ -1,6 +1,6 @@
 # Vercel デプロイ
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · **日本語** · [Français](README.fr.md) · [Deutsch](README.de.md)
+**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · **日本語** · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 4 段階フィルタリング完備。L2 反 Microsoft Defender SafeLinks スキャナは CF ネイティブの ASN 検出の代わりに IP レンジマッチングを使用 — 精度はやや低く(IP レンジは数ヶ月ごとに更新が必要)、ただし実用上は十分。
 

@@ -1,6 +1,6 @@
 # Deno Deploy 部署
 
-**Language**: [简体中文](README.md) · **繁體中文** · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
+**Language**: [简体中文](README.md) · **繁體中文** · [English](README.en.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 Deno Deploy 沒有 URL 協定層級的「一鍵部署按鈕」,但 GitHub 整合幾乎等價 — 配一次後 push 自動部署。
 

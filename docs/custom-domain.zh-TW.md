@@ -1,6 +1,6 @@
 # 綁定自訂網域
 
-**Language**: [简体中文](custom-domain.md) · **繁體中文** · [English](custom-domain.en.md) · [日本語](custom-domain.ja.md) · [Français](custom-domain.fr.md) · [Deutsch](custom-domain.de.md)
+**Language**: [简体中文](custom-domain.md) · **繁體中文** · [English](custom-domain.en.md) · [日本語](custom-domain.ja.md) · [Français](custom-domain.fr.md) · [Deutsch](custom-domain.de.md) · [Español](custom-domain.es.md) · [Português](custom-domain.pt.md)
 
 部署完成後,需要把你的網域指向部署平台,郵件追蹤連結才會用你自己的網域。
 

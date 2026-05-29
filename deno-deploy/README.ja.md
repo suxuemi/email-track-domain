@@ -1,6 +1,6 @@
 # Deno Deploy デプロイ
 
-**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · **日本語** · [Français](README.fr.md) · [Deutsch](README.de.md)
+**Language**: [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · **日本語** · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md) · [Português](README.pt.md)
 
 Deno Deploy には URL レベルの「ワンクリックデプロイボタン」がありませんが、GitHub 連携によってほぼ同等の体験を実現できます — 一度設定すれば push で自動デプロイ。
 

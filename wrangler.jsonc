@@ -1,0 +1,22 @@
+/**
+ * Cloudflare Worker 配置
+ * 文档：https://developers.cloudflare.com/workers/wrangler/configuration/
+ *
+ * 修改 vars 段可以改后端地址等参数；也可以在 Dashboard 的 Settings → Variables
+ * 配置（Dashboard 优先级高于此处）。
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "email-track-domain",
+  "main": "src/index.js",
+  "compatibility_date": "2024-12-30",
+  "vars": {
+    "BACKEND_HOST": "cf-track.laifa.xin",
+    "BACKEND_PROTOCOL": "http:",
+    "REDIRECT_TARGET": "https://www.google.com"
+  }
+  // 绑定自定义域名见 docs/custom-domain.md，部署后在 Dashboard 配置即可
+  // "routes": [
+  //   { "pattern": "track.yourdomain.com/*", "zone_name": "yourdomain.com" }
+  // ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "email-track-domain-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Email tracking domain proxy on Vercel Edge Functions (degraded — no ASN-based scanner detection).",
+  "type": "module"
+}

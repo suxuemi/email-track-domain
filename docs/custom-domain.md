@@ -1,6 +1,15 @@
 # 绑定自定义域名
 
-部署完成后，需要把你的域名指向 Worker / Vercel 项目，邮件追踪链接才会用你自己的域名。
+部署完成后，需要把你的域名指向部署平台，邮件追踪链接才会用你自己的域名。
+
+四个平台的域名灵活度：
+
+| 平台 | DNS 要求 | 接入方式 |
+|---|---|---|
+| Cloudflare Workers | 整域 DNS 必须托管在 CF | NS 接入 |
+| Vercel | 任意 DNS 服务商 | CNAME 接入 |
+| Netlify | 任意 DNS 服务商 | CNAME 接入 |
+| Deno Deploy | 任意 DNS 服务商 | CNAME 接入 |
 
 ---
 
@@ -47,6 +56,37 @@
    Value: cname.vercel-dns.com
    ```
 4. 加完 DNS 等几分钟，Vercel 自动签 SSL 证书
+
+---
+
+## Netlify
+
+1. 进 Netlify Dashboard → 选站点 → **Domain management** → **Custom domains** → **Add a domain**
+2. 输入 `track.yourdomain.com` → **Verify** → **Yes, add domain**
+3. Netlify 显示需要加的 DNS 记录，去 DNS 服务商配置：
+   ```
+   Type: CNAME
+   Name: track
+   Value: <your-site>.netlify.app
+   ```
+4. 等 SSL 自动签发（几分钟到 24 小时）
+
+---
+
+## Deno Deploy <a id="deno-deploy"></a>
+
+1. 进 [dash.deno.com](https://dash.deno.com) → 选项目 → **Settings** → **Domains** → **Add Domain**
+2. 输入 `track.yourdomain.com`，Deno Deploy 给出两条记录：
+   ```
+   Type: A      Name: track  Value: 34.120.54.55   （示例，以实际为准）
+   Type: AAAA   Name: track  Value: ...           （IPv6）
+   ```
+   或者用 CNAME：
+   ```
+   Type: CNAME  Name: track  Value: <project>.deno.dev
+   ```
+3. 去 DNS 服务商加完后回 Deno Deploy 点 **Verify**
+4. 自动签 SSL
 
 ---
 

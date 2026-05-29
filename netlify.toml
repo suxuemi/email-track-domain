@@ -1,0 +1,17 @@
+# Netlify 配置
+# 文档：https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "public"
+  command = "echo 'no build step needed'"
+
+# 边缘函数接管所有路径
+[[edge_functions]]
+  function = "track"
+  path = "/*"
+
+# 环境变量在部署后到 Site Settings → Environment Variables 配置
+# 代码内有默认值：
+#   BACKEND_HOST       默认 cf-track.laifa.xin
+#   BACKEND_PROTOCOL   默认 http:
+#   REDIRECT_TARGET    默认 https://www.google.com

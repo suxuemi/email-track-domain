@@ -80,7 +80,7 @@ Diferencia: la Opción A es flexible (puede enrutar rutas específicas), la Opci
 1. Abrir [dash.deno.com](https://dash.deno.com) → seleccionar proyecto → **Settings** → **Domains** → **Add Domain**
 2. Introducir `track.yourdomain.com`, Deno Deploy da dos registros:
    ```
-   Type: A      Name: track  Value: 34.120.54.55   (ejemplo, usar el valor real)
+   Type: A      Name: track  Value: <your-IPv4>   (ejemplo, usar el valor real)
    Type: AAAA   Name: track  Value: ...           (IPv6)
    ```
    O usar CNAME:

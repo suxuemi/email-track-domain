@@ -1,15 +1,17 @@
 /**
  * Email Tracking Domain - Vercel Edge Function
  *
- * 四层过滤（L2 用 IP 段代替 ASN，因 Vercel Edge Runtime 不暴露 ASN）：
- *   L0  扩展名黑名单（.php / .aspx → 302）
- *   L1  路径白名单（追踪路径 + 静态文件 → 302 if miss）
- *   L2  反 Microsoft 邮件扫描器（头部指纹 + IP 段匹配）
- *   L3  反向代理到 BACKEND_HOST
+ * Four-stage filtering (L2 uses IP-range matching instead of ASN, since the
+ * Vercel Edge Runtime does not expose ASN):
+ *   L0  Extension blocklist (.php / .aspx → 302)
+ *   L1  Path allowlist (tracking paths + static files → 302 on miss)
+ *   L2  Anti-Microsoft email scanner (header fingerprint + IP-range match)
+ *   L3  Reverse proxy to BACKEND_HOST
  *
- * 相比 Cloudflare Worker 版的差异：
- *   - L2 用 Microsoft IP 段匹配代替 ASN 8075 检测（精度略低，覆盖主要场景）
- *   - 其余行为完全一致
+ * Differences from the Cloudflare Worker version:
+ *   - L2 uses Microsoft IP-range matching instead of ASN 8075 detection
+ *     (slightly lower precision, but covers the main scenarios)
+ *   - Otherwise behavior is identical
  */
 
 export const config = { runtime: 'edge' };
@@ -24,8 +26,8 @@ const ALLOWED_PATH_PREFIXES = [
 
 const ALLOWED_ROOT_FILE_EXTENSIONS = ['.txt', '.png', '.ico', '.jpg'];
 
-// Microsoft 邮件扫描器 IP 段（IPv4）
-// Source of truth: shared/microsoft-ranges.js — 同步更新
+// Microsoft email scanner IP ranges (IPv4)
+// Source of truth: shared/microsoft-ranges.js — keep in sync
 const MICROSOFT_IPV4_RANGES = [
   '40.92.0.0/15', '40.107.0.0/16', '52.100.0.0/14', '104.47.0.0/17',
   '13.107.6.0/24', '13.107.9.0/24', '13.107.18.0/24', '13.107.42.0/24', '13.107.43.0/24',

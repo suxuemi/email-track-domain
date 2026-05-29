@@ -1,29 +1,31 @@
 /**
- * Microsoft 邮件扫描器 IP 段（source of truth）
+ * Microsoft email scanner IP ranges (source of truth)
  *
- * 用途：在不支持 ASN 检测的边缘平台（Vercel / Netlify / Deno Deploy）上，
- *      用 IP 段匹配代替 ASN 8075 检测，实现 L2 反 Microsoft Defender SafeLinks 扫描器。
+ * Purpose: on edge platforms without native ASN detection (Vercel / Netlify /
+ * Deno Deploy), use IP-range matching instead of ASN 8075 detection to
+ * implement L2 anti-Microsoft Defender SafeLinks scanner detection.
  *
- * 更新建议：每 3-6 个月同步一次。数据源：
- *   - Office 365 IP 范围 JSON: https://endpoints.office.com/endpoints/worldwide?clientrequestid=<uuid>
- *   - Microsoft 365 文档: https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges
- *   - ASN 8075 BGP 公告: https://bgpview.io/asn/8075
+ * Refresh recommendation: every 3-6 months. Data sources:
+ *   - Office 365 IP ranges JSON: https://endpoints.office.com/endpoints/worldwide?clientrequestid=<uuid>
+ *   - Microsoft 365 docs: https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges
+ *   - ASN 8075 BGP announcements: https://bgpview.io/asn/8075
  *
- * ⚠️ 这个文件是 source of truth — 更新后必须同步以下文件中的 MICROSOFT_IPV4_RANGES：
+ * ⚠️ This file is the source of truth — after updating, sync MICROSOFT_IPV4_RANGES in:
  *   - src/index.js                          (Cloudflare Worker)
  *   - vercel/api/track.js                   (Vercel Edge Function)
  *   - netlify/edge-functions/track.js       (Netlify Edge Function)
  *   - deno-deploy/main.js                   (Deno Deploy)
  *
- * 精度策略（避免过宽误伤）：
- *   - EOP outbound 段 = 主要 SafeLinks 扫描器来源，必收
- *   - Microsoft 365 services 段 = Office 服务，收
- *   - Microsoft Corp 历史段 = 公司内网/工程师，收（量小）
- *   - 不收宽 Azure 段（13.64-/11, 20.0-/8 等）— 这些段里跑客户 VM，会误伤真实用户
+ * Precision strategy (avoid overly broad ranges that cause false positives):
+ *   - EOP outbound = primary SafeLinks scanner source, must include
+ *   - Microsoft 365 services = Office services, include
+ *   - Microsoft Corp historical ranges = corporate network / engineers, include (small volume)
+ *   - Do NOT include broad Azure ranges (13.64-/11, 20.0-/8, etc.) — those host
+ *     customer VMs and would cause false positives against real users
  */
 
 export const MICROSOFT_IPV4_RANGES = [
-  // === Exchange Online Protection (EOP) outbound — 主要 SafeLinks 扫描器来源 ===
+  // === Exchange Online Protection (EOP) outbound — primary SafeLinks scanner source ===
   '40.92.0.0/15',
   '40.107.0.0/16',
   '52.100.0.0/14',     // 52.100.0.0 - 52.103.255.255
@@ -36,7 +38,7 @@ export const MICROSOFT_IPV4_RANGES = [
   '13.107.42.0/24',
   '13.107.43.0/24',
 
-  // === Microsoft Corp ASN 8075 历史段 ===
+  // === Microsoft Corp ASN 8075 historical ranges ===
   '131.107.0.0/16',
   '157.55.0.0/16',
   '157.56.0.0/14',     // 157.56.0.0 - 157.59.255.255
@@ -46,7 +48,7 @@ export const MICROSOFT_IPV4_RANGES = [
 ];
 
 /**
- * IPv4 转 32 位整数（无符号）
+ * Convert IPv4 to 32-bit unsigned integer.
  */
 export function ipv4ToInt(ip) {
   const parts = ip.split('.');
@@ -61,7 +63,7 @@ export function ipv4ToInt(ip) {
 }
 
 /**
- * 判断 IPv4 是否落在 CIDR 段内
+ * Check whether an IPv4 address falls within a CIDR range.
  */
 export function isIPv4InCIDR(ip, cidr) {
   const slash = cidr.indexOf('/');
@@ -78,10 +80,10 @@ export function isIPv4InCIDR(ip, cidr) {
 }
 
 /**
- * 判断 IP 是否在 Microsoft 已知段内（仅 IPv4，IPv6 一律返回 false）
+ * Check whether an IP is in Microsoft's known ranges (IPv4 only; IPv6 always returns false).
  *
- * 注：MS SafeLinks 扫描器目前几乎全部使用 IPv4，IPv6 暂不支持。
- *     如未来发现 IPv6 扫描，再扩展 MICROSOFT_IPV6_RANGES 与匹配函数。
+ * Note: MS SafeLinks scanners currently use almost exclusively IPv4, so IPv6 is unsupported.
+ *       If IPv6 scanners appear later, extend MICROSOFT_IPV6_RANGES and the matching function.
  */
 export function isMicrosoftIP(ip) {
   if (!ip) return false;

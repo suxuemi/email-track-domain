@@ -1,18 +1,18 @@
 /**
  * Email Tracking Domain - Cloudflare Worker
  *
- * 四层过滤的邮件追踪域名反向代理：
- *   L0  扩展名黑名单（.php / .aspx → 302）
- *   L1  路径白名单（追踪路径 + 静态文件，未命中 → 302）
- *   L2  反 Microsoft 邮件扫描器指纹（ASN 8075 + Surface Pro + 空 Referer → 302）
- *   L3  反向代理到追踪后端（env.BACKEND_HOST）
+ * Four-stage filtering reverse proxy for email tracking:
+ *   L0  Extension blocklist (.php / .aspx → 302)
+ *   L1  Path allowlist (tracking paths + static files, miss → 302)
+ *   L2  Anti-Microsoft email scanner fingerprint (ASN 8075 + Surface Pro + empty Referer → 302)
+ *   L3  Reverse proxy to tracking backend (env.BACKEND_HOST)
  *
- * 命中 L0/L1/L2 都重定向到 google.com，避免暴露后端。
+ * L0/L1/L2 hits all redirect to google.com to avoid exposing the backend.
  *
- * 配置（wrangler.jsonc 的 vars 段或 Dashboard）：
- *   BACKEND_HOST       追踪后端主机名，默认 cf-track.laifa.xin
- *   BACKEND_PROTOCOL   后端协议，默认 http:（如后端有 HTTPS 改 https:）
- *   REDIRECT_TARGET    所有拒绝场景的跳转地址，默认 https://www.google.com
+ * Configuration (vars in wrangler.jsonc or Dashboard):
+ *   BACKEND_HOST       Tracking backend hostname, default cf-track.laifa.xin
+ *   BACKEND_PROTOCOL   Backend protocol, default http: (change to https: if backend is HTTPS)
+ *   REDIRECT_TARGET    Where to send rejected requests, default https://www.google.com
  */
 
 const BLOCKED_EXTENSIONS = ['.php', '.aspx'];
@@ -25,8 +25,8 @@ const ALLOWED_PATH_PREFIXES = [
 
 const ALLOWED_ROOT_FILE_EXTENSIONS = ['.txt', '.png', '.ico', '.jpg'];
 
-// Microsoft 邮件扫描器 IP 段（IPv4，仅作为 ASN 检测的兜底）
-// Source of truth: shared/microsoft-ranges.js — 同步更新
+// Microsoft email scanner IP ranges (IPv4, used as fallback when ASN is unavailable)
+// Source of truth: shared/microsoft-ranges.js — keep in sync
 const MICROSOFT_IPV4_RANGES = [
   '40.92.0.0/15', '40.107.0.0/16', '52.100.0.0/14', '104.47.0.0/17',
   '13.107.6.0/24', '13.107.9.0/24', '13.107.18.0/24', '13.107.42.0/24', '13.107.43.0/24',
@@ -96,12 +96,12 @@ function isPathAllowed(pathname) {
 }
 
 /**
- * 反 Microsoft Defender SafeLinks / Outlook 链接预扫描
+ * Anti-Microsoft Defender SafeLinks / Outlook link pre-scan.
  *
- * 头部指纹：Referer 空 + Sec-CH-UA-Model="Surface Pro"
- * 网络指纹：CF 原生 ASN 8075（MICROSOFT-CORP-MSN-AS-BLOCK），兜底用 IP 段匹配
+ * Header fingerprint: empty Referer + Sec-CH-UA-Model="Surface Pro"
+ * Network fingerprint: CF-native ASN 8075 (MICROSOFT-CORP-MSN-AS-BLOCK); fall back to IP-range match.
  *
- * 注：不针对 Gmail / Google Safe Browsing（ASN 15169），如需可自行扩展。
+ * Note: this check does not cover Gmail / Google Safe Browsing (ASN 15169); extend if needed.
  */
 function isMicrosoftScanner(request) {
   const referer = request.headers.get('referer') || '';
@@ -111,7 +111,7 @@ function isMicrosoftScanner(request) {
   const cf = request.cf || {};
   if (cf.asn === 8075) return true;
 
-  // ASN 拿不到（本地 dev / 异常路径）时用 IP 段兜底
+  // ASN unavailable (local dev / unusual path) — fall back to IP-range match
   const ip = request.headers.get('cf-connecting-ip');
   return isMicrosoftIP(ip);
 }

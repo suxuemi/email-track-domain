@@ -1,16 +1,17 @@
 /**
- * Email Tracking Domain - Netlify Edge Function（Deno runtime）
+ * Email Tracking Domain - Netlify Edge Function (Deno runtime)
  *
- * 四层过滤（L2 用 IP 段代替 ASN）：
- *   L0  扩展名黑名单
- *   L1  路径白名单
- *   L2  反 Microsoft 邮件扫描器（头部指纹 + IP 段匹配）
- *   L3  反向代理到 BACKEND_HOST
+ * Four-stage filtering (L2 uses IP-range matching instead of ASN):
+ *   L0  Extension blocklist
+ *   L1  Path allowlist
+ *   L2  Anti-Microsoft email scanner (header fingerprint + IP-range match)
+ *   L3  Reverse proxy to BACKEND_HOST
  *
- * 环境变量在 Netlify Site Settings → Environment Variables 配置（有默认值）：
- *   BACKEND_HOST       默认 cf-track.laifa.xin
- *   BACKEND_PROTOCOL   默认 http:
- *   REDIRECT_TARGET    默认 https://www.google.com
+ * Configure environment variables in Netlify Site Settings → Environment Variables
+ * (defaults apply if unset):
+ *   BACKEND_HOST       default cf-track.laifa.xin
+ *   BACKEND_PROTOCOL   default http:
+ *   REDIRECT_TARGET    default https://www.google.com
  */
 
 const BLOCKED_EXTENSIONS = ['.php', '.aspx'];
@@ -23,8 +24,8 @@ const ALLOWED_PATH_PREFIXES = [
 
 const ALLOWED_ROOT_FILE_EXTENSIONS = ['.txt', '.png', '.ico', '.jpg'];
 
-// Microsoft 邮件扫描器 IP 段（IPv4）
-// Source of truth: shared/microsoft-ranges.js — 同步更新
+// Microsoft email scanner IP ranges (IPv4)
+// Source of truth: shared/microsoft-ranges.js — keep in sync
 const MICROSOFT_IPV4_RANGES = [
   '40.92.0.0/15', '40.107.0.0/16', '52.100.0.0/14', '104.47.0.0/17',
   '13.107.6.0/24', '13.107.9.0/24', '13.107.18.0/24', '13.107.42.0/24', '13.107.43.0/24',
@@ -108,7 +109,7 @@ export default async (request, context) => {
     return redirect(redirectTarget);
   }
 
-  // Netlify context.ip 直接给客户端 IP，无需解析 x-forwarded-for
+  // Netlify's context.ip provides the client IP directly; no need to parse x-forwarded-for
   if (isMicrosoftScanner(request, context.ip)) {
     return redirect(redirectTarget);
   }

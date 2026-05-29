@@ -80,7 +80,7 @@
 1. 进 [dash.deno.com](https://dash.deno.com) → 选项目 → **Settings** → **Domains** → **Add Domain**
 2. 输入 `track.yourdomain.com`，Deno Deploy 给出两条记录：
    ```
-   Type: A      Name: track  Value: 34.120.54.55   （示例，以实际为准）
+   Type: A      Name: track  Value: <your-IPv4>   （示例，以实际为准）
    Type: AAAA   Name: track  Value: ...           （IPv6）
    ```
    或者用 CNAME：

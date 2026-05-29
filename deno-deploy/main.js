@@ -1,18 +1,18 @@
 /**
  * Email Tracking Domain - Deno Deploy
  *
- * 四层过滤（L2 用 IP 段代替 ASN）：
- *   L0  扩展名黑名单
- *   L1  路径白名单
- *   L2  反 Microsoft 邮件扫描器（头部指纹 + IP 段匹配）
- *   L3  反向代理到 BACKEND_HOST
+ * Four-stage filtering (L2 uses IP-range matching instead of ASN):
+ *   L0  Extension blocklist
+ *   L1  Path allowlist
+ *   L2  Anti-Microsoft email scanner (header fingerprint + IP-range match)
+ *   L3  Reverse proxy to BACKEND_HOST
  *
- * 部署：dash.deno.com/new → GitHub → 选本仓库 → Entry point: deno-deploy/main.js
+ * Deploy: dash.deno.com/new → GitHub → select this repo → Entry point: deno-deploy/main.js
  *
- * 环境变量（在 Deno Deploy Project Settings → Environment Variables）：
- *   BACKEND_HOST       默认 cf-track.laifa.xin
- *   BACKEND_PROTOCOL   默认 http:
- *   REDIRECT_TARGET    默认 https://www.google.com
+ * Environment variables (Deno Deploy Project Settings → Environment Variables):
+ *   BACKEND_HOST       default cf-track.laifa.xin
+ *   BACKEND_PROTOCOL   default http:
+ *   REDIRECT_TARGET    default https://www.google.com
  */
 
 const BLOCKED_EXTENSIONS = ['.php', '.aspx'];
@@ -25,8 +25,8 @@ const ALLOWED_PATH_PREFIXES = [
 
 const ALLOWED_ROOT_FILE_EXTENSIONS = ['.txt', '.png', '.ico', '.jpg'];
 
-// Microsoft 邮件扫描器 IP 段（IPv4）
-// Source of truth: shared/microsoft-ranges.js — 同步更新
+// Microsoft email scanner IP ranges (IPv4)
+// Source of truth: shared/microsoft-ranges.js — keep in sync
 const MICROSOFT_IPV4_RANGES = [
   '40.92.0.0/15', '40.107.0.0/16', '52.100.0.0/14', '104.47.0.0/17',
   '13.107.6.0/24', '13.107.9.0/24', '13.107.18.0/24', '13.107.42.0/24', '13.107.43.0/24',
@@ -64,7 +64,8 @@ function isMicrosoftIP(ip) {
 }
 
 function getClientIP(request, info) {
-  // 生产流量经过 Deno Deploy 边缘 LB，真实 IP 在 x-forwarded-for
+  // Production traffic passes through Deno Deploy's edge load balancer;
+  // the real client IP is in x-forwarded-for.
   const xff = request.headers.get('x-forwarded-for');
   if (xff) return xff.split(',')[0].trim();
   return info?.remoteAddr?.hostname || '';

@@ -1,0 +1,53 @@
+name: Update i18n badge
+
+# 每次 README*.md 改动后自动重算语言数，更新 .github/badges/i18n.json
+# 主 README 的 i18n 徽章是 shields.io endpoint 模式，从该 JSON 读取
+# 加减翻译后不需要手动改任何徽章
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README*.md'
+
+permissions:
+  contents: write
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Count language READMEs
+        id: count
+        run: |
+          # 数所有 README*.md（含默认 README.md 和 README.<lang>.md 翻译版）
+          count=$(ls README*.md 2>/dev/null | wc -l | tr -d ' ')
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "Counted $count language READMEs"
+
+      - name: Update badge JSON
+        run: |
+          mkdir -p .github/badges
+          cat > .github/badges/i18n.json <<EOF
+          {
+            "schemaVersion": 1,
+            "label": "i18n",
+            "message": "${{ steps.count.outputs.count }} languages",
+            "color": "blue"
+          }
+          EOF
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet .github/badges/i18n.json; then
+            echo "No changes to i18n.json"
+            exit 0
+          fi
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/badges/i18n.json
+          git commit -m "chore: auto-update i18n badge to ${{ steps.count.outputs.count }} languages"
+          git push

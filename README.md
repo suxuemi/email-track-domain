@@ -6,7 +6,7 @@
 
 ### 🟧 Cloudflare Worker（推荐 — 完整四层过滤）
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/YOUR_GITHUB_USERNAME/09_email-track-domain)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain)
 
 部署后：
 1. 在 Cloudflare Dashboard → Workers → 选 `email-track-domain` Worker → Settings → Variables，确认 `BACKEND_HOST` 等变量
@@ -14,7 +14,7 @@
 
 ### ⚫ Vercel Edge Function（降级版 — 缺 L2 反扫描）
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_GITHUB_USERNAME/09_email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=BACKEND_HOST%3D%E4%BD%A0%E7%9A%84%E8%BF%BD%E8%B8%AA%E5%90%8E%E7%AB%AF%E5%9F%9F%E5%90%8D)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=BACKEND_HOST%3D%E4%BD%A0%E7%9A%84%E8%BF%BD%E8%B8%AA%E5%90%8E%E7%AB%AF%E5%9F%9F%E5%90%8D)
 
 > ⚠️ Vercel 版相比 Cloudflare 版缺一层反 Microsoft Defender SafeLinks 扫描器的能力（Vercel 不暴露 ASN）。详见 [vercel/README.md](vercel/README.md)。
 

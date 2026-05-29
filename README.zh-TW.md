@@ -4,7 +4,7 @@
 
 **郵件追蹤網域一鍵部署 — 專屬網域下的開信 / 點擊 / 附件追蹤反向代理**
 
-[![version](https://img.shields.io/badge/version-1.0.0-purple?style=flat-square)](CHANGELOG.md)
+[![release](https://img.shields.io/github/v/release/suxuemi/email-track-domain?style=flat-square&color=purple&label=release)](https://github.com/suxuemi/email-track-domain/releases/latest)
 ![platforms](https://img.shields.io/badge/platforms-Cloudflare%20%7C%20Vercel%20%7C%20Netlify%20%7C%20Deno-orange?style=flat-square)
 ![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 ![i18n](https://img.shields.io/badge/i18n-8%20languages-blue?style=flat-square)

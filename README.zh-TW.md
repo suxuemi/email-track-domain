@@ -11,14 +11,14 @@
 | **Cloudflare Workers** | [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain) | ASN 原生(最準) | NS 必須託管 CF |
 | **Vercel** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=BACKEND_HOST%3D%E4%BD%A0%E7%9A%84%E8%BF%BD%E8%B8%AA%E5%90%8E%E7%AB%AF%E5%9F%9F%E5%90%8D) | IP 段(中) | CNAME 任意 DNS |
 | **Netlify** | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain) | IP 段(中) | CNAME 任意 DNS |
-| **Deno Deploy** | [→ 部署指南](deno-deploy/README.md) | IP 段(中) | CNAME 任意 DNS |
+| **Deno Deploy** | [→ 部署指南](deno-deploy/README.zh-TW.md) | IP 段(中) | CNAME 任意 DNS |
 
 > **挑哪個?**
 > - DNS 已經在 Cloudflare → **CF Worker**(最準的反掃描)
 > - DNS 在別處不想動 → **Vercel** 或 **Netlify**(任意 DNS CNAME 接入)
 > - 喜歡 Deno / 想保留 Service Worker 原生語法 → **Deno Deploy**
 
-部署後**必須綁定自訂網域**才有意義 → [docs/custom-domain.md](docs/custom-domain.md)
+部署後**必須綁定自訂網域**才有意義 → [docs/custom-domain.md](docs/custom-domain.zh-TW.md)
 
 ---
 
@@ -98,7 +98,7 @@
 
 ## 自訂網域綁定
 
-部署後必須綁定你自己的子網域才有意義。詳見 **[docs/custom-domain.md](docs/custom-domain.md)**(已涵蓋四個平台)。
+部署後必須綁定你自己的子網域才有意義。詳見 **[docs/custom-domain.md](docs/custom-domain.zh-TW.md)**(已涵蓋四個平台)。
 
 ---
 

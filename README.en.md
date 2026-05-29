@@ -11,14 +11,14 @@
 | **Cloudflare Workers** | [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain) | Native ASN (highest accuracy) | DNS must be hosted on CF |
 | **Vercel** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host) | IP-range (medium) | Any DNS via CNAME |
 | **Netlify** | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain) | IP-range (medium) | Any DNS via CNAME |
-| **Deno Deploy** | [→ Setup guide](deno-deploy/README.md) | IP-range (medium) | Any DNS via CNAME |
+| **Deno Deploy** | [→ Setup guide](deno-deploy/README.en.md) | IP-range (medium) | Any DNS via CNAME |
 
 > **Which one?**
 > - DNS already on Cloudflare → **CF Worker** (most accurate anti-scanner)
 > - Don't want to move DNS → **Vercel** or **Netlify** (CNAME from any DNS provider)
 > - Prefer Deno / want native Service Worker syntax → **Deno Deploy**
 
-After deploying, **you must bind a custom domain** to get any benefit → [docs/custom-domain.md](docs/custom-domain.md)
+After deploying, **you must bind a custom domain** to get any benefit → [docs/custom-domain.md](docs/custom-domain.en.md)
 
 ---
 
@@ -98,7 +98,7 @@ Where to change:
 
 ## Custom domain binding
 
-A deployment is useless without binding your own subdomain. See **[docs/custom-domain.md](docs/custom-domain.md)** (covers all four platforms).
+A deployment is useless without binding your own subdomain. See **[docs/custom-domain.md](docs/custom-domain.en.md)** (covers all four platforms).
 
 ---
 

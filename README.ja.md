@@ -11,14 +11,14 @@
 | **Cloudflare Workers** | [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain) | ネイティブ ASN（最高精度） | DNS を CF にホストする必要あり |
 | **Vercel** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host) | IP レンジ（中） | 任意の DNS で CNAME |
 | **Netlify** | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain) | IP レンジ（中） | 任意の DNS で CNAME |
-| **Deno Deploy** | [→ セットアップガイド](deno-deploy/README.md) | IP レンジ（中） | 任意の DNS で CNAME |
+| **Deno Deploy** | [→ セットアップガイド](deno-deploy/README.ja.md) | IP レンジ（中） | 任意の DNS で CNAME |
 
 > **どれを選ぶ？**
 > - DNS がすでに Cloudflare 上 → **CF Worker**（最高精度のスキャナ対策）
 > - DNS を移動したくない → **Vercel** または **Netlify**（任意の DNS プロバイダから CNAME）
 > - Deno を好む / Service Worker ネイティブ構文を維持したい → **Deno Deploy**
 
-デプロイ後、**カスタムドメインのバインドが必須**です → [docs/custom-domain.md](docs/custom-domain.md)
+デプロイ後、**カスタムドメインのバインドが必須**です → [docs/custom-domain.md](docs/custom-domain.ja.md)
 
 ---
 
@@ -98,7 +98,7 @@
 
 ## カスタムドメインのバインド
 
-デプロイ後、自分のサブドメインをバインドしなければ意味がありません。詳細は **[docs/custom-domain.md](docs/custom-domain.md)**（4 プラットフォーム対応）。
+デプロイ後、自分のサブドメインをバインドしなければ意味がありません。詳細は **[docs/custom-domain.md](docs/custom-domain.ja.md)**（4 プラットフォーム対応）。
 
 ---
 

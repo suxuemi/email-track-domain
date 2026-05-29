@@ -4,6 +4,7 @@
 
 **邮件追踪域名一键部署 — 专属域名下的打开 / 点击 / 附件追踪反代**
 
+[![version](https://img.shields.io/badge/version-1.0.0-purple?style=flat-square)](CHANGELOG.md)
 ![platforms](https://img.shields.io/badge/platforms-Cloudflare%20%7C%20Vercel%20%7C%20Netlify%20%7C%20Deno-orange?style=flat-square)
 ![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 ![i18n](https://img.shields.io/badge/i18n-8%20languages-blue?style=flat-square)
@@ -11,7 +12,7 @@
 
 🌐 **官方网站**：[laifa.xin](https://laifa.xin)
 
-**简体中文** | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [日本語](README.ja.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português](README.pt.md)
+**简体中文** | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [日本語](README.ja.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português](README.pt.md) | [📋 Changelog](CHANGELOG.md)
 
 </div>
 

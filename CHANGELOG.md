@@ -46,3 +46,6 @@ Initial release.
 ### Internal
 
 - Private repository `tony-claude-rules` for centralized Claude Code instruction files (symlinked into projects, gitignored from public repos)
+
+[Unreleased]: https://github.com/suxuemi/email-track-domain/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/suxuemi/email-track-domain/releases/tag/v1.0.0

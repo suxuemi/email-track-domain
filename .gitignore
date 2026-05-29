@@ -31,3 +31,7 @@ pnpm-debug.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Private AI/automation instructions (本地 AI 协作规则，不公开)
+CLAUDE.md
+.claude/

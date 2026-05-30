@@ -18,210 +18,54 @@
 
 ---
 
-## Déploiement en un clic (quatre plateformes au choix)
+## ⚡ Trois étapes
 
-| Plateforme | Bouton | Anti-scanner L2 | Flexibilité DNS |
-|---|---|---|---|
-| **Cloudflare Workers** | [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain) | ASN natif (précision max) | DNS hébergé chez CF requis |
-| **Vercel** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host) | Plages IP (moyenne) | Tout DNS via CNAME |
-| **Netlify** | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain) | Plages IP (moyenne) | Tout DNS via CNAME |
-| **Deno Deploy** | [→ Guide d'installation](deno-deploy/README.fr.md) | Plages IP (moyenne) | Tout DNS via CNAME |
+### 1️⃣ Cliquer sur un bouton Deploy (choisir une plateforme)
 
-> **Lequel choisir ?**
-> - DNS déjà sur Cloudflare → **CF Worker** (anti-scanner le plus précis)
-> - Ne souhaite pas migrer le DNS → **Vercel** ou **Netlify** (CNAME depuis n'importe quel fournisseur DNS)
-> - Préfère Deno / souhaite conserver la syntaxe Service Worker native → **Deno Deploy**
-
-Après le déploiement, **vous devez impérativement lier un domaine personnalisé** → [docs/custom-domain.md](docs/custom-domain.fr.md)
-
----
-
-## À quoi ça sert ?
-
-Votre système de marketing/notification par email intègre des **pixels de suivi** et des **liens de redirection avec ID de clic** dans les emails pour mesurer les taux d'ouverture et de clic. Ces liens pointent vers un backend de suivi (par exemple `cf-track.laifa.xin`).
-
-**Problèmes** :
-- Utiliser le domaine du backend directement → volume d'envoi élevé → liste noire des systèmes anti-spam
-- Domaine de suivi partagé → les comportements d'autres utilisateurs polluent la réputation de votre domaine
-- Microsoft Defender / Outlook récupère automatiquement les liens dans les emails pour pré-analyse → pollue vos statistiques d'ouverture/clic
-
-**Solution apportée par ce Worker** :
-
-Utilisez **votre propre domaine** comme couche de proxy inverse avec un filtrage à quatre niveaux :
-
-```
-Le destinataire clique → Votre domaine (track.yourdomain.com)
-                    ↓
-         ┌──────────────────────┐
-         │  Worker / Edge Func  │
-         │                      │
-         │  L0 blocage .php/.aspx│ → 302 google.com
-         │  L1 chemins autorisés │ → 302 google.com
-         │  L2 anti-scanner MS  │ → 302 google.com
-         │  L3 proxy inverse    │
-         └──────────────────────┘
-                    ↓
-         Backend de suivi réel (cf-track.laifa.xin ou le vôtre)
-                    ↓
-         Enregistre ouverture/clic + retourne pixel/redirection
-```
-
-Le destinataire voit **votre domaine**, mais les données continuent de transiter vers le backend de suivi d'origine.
-
----
-
-## Filtrage en quatre niveaux
-
-| Niveau | Rôle | Action |
+| Plateforme | Déploiement en un clic | Idéal pour |
 |---|---|---|
-| **L0** | Liste noire d'extensions — `.php` / `.aspx` sont des signatures de scanners courants | 302 → google.com |
-| **L1** | Liste blanche de chemins — seuls les chemins de suivi (`/r/`, `/track/`, `/img/`, etc.) et les fichiers statiques racine (`.png/.ico`, etc.) sont autorisés | Échec → 302 |
-| **L2** | Détection d'empreinte du scanner Microsoft Defender SafeLinks (en-têtes + ASN/plages IP) | 302 → google.com |
-| **L3** | Proxy inverse vers `BACKEND_HOST`, chemin/paramètres préservés | — |
+| **Cloudflare Workers** | [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain) | DNS déjà sur Cloudflare |
+| **Vercel** | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host) | Ne pas déplacer le DNS, CNAME de tout fournisseur |
+| **Netlify** | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain) | Comme Vercel |
+| **Deno Deploy** | [→ Guide d'installation](deno-deploy/README.fr.md) | Préférer l'écosystème Deno |
 
-### Deux implémentations de L2
+> 💡 **Hésitation ? → Utilisez Vercel** (tout DNS + le plus simple)
 
-```
-Empreinte d'en-tête (commune à toutes)   Referer vide + Sec-CH-UA-Model="Surface Pro"
-Empreinte réseau (selon la plateforme)
-  ├─ Cloudflare Worker                   ASN 8075 natif (MICROSOFT-CORP-MSN-AS-BLOCK)
-  └─ Vercel/Netlify/Deno                 Correspondance de plages IP (repli)
-```
+### 2️⃣ Lier votre propre domaine
 
-**À propos du repli par plages IP** : Vercel/Netlify/Deno n'ont pas accès à l'ASN, donc nous utilisons des plages IP Microsoft codées en dur (EOP outbound + Microsoft 365 services + plages historiques MS Corp). La précision est légèrement inférieure à l'ASN ; les plages doivent être rafraîchies tous les 3 à 6 mois.
+Après le déploiement, pointez votre sous-domaine (par ex. `track.yourdomain.com`) vers le projet déployé.
+
+→ **[Configuration du domaine personnalisé](custom-domain.fr.md)** (couvre les quatre plateformes)
+
+### 3️⃣ Ajouter le domaine dans le **[backend laifa.xin]**
+
+Ouvrir le **[backend laifa.xin]** → ajouter un domaine de suivi → saisir `track.yourdomain.com` → cliquer sur vérifier → ✓
+
+Après vérification, tous les liens de suivi dans vos emails utiliseront ce domaine — plus professionnel et meilleur score anti-spam.
 
 ---
 
 ## Types de suivi pris en charge
 
-| Type | Mise en œuvre | Exemples de chemins |
+| Type | Mécanisme |
+|---|---|
+| 📧 Suivi des ouvertures | Pixel transparent 1×1 |
+| 🔗 Suivi des clics | Redirection 302 |
+| 📎 Suivi des téléchargements de pièces jointes | Proxy inverse du flux de fichier |
+
+Les trois fonctionnent sans configuration supplémentaire.
+
+---
+
+## Configuration (laisser par défaut généralement)
+
+| Variable | Défaut | Description |
 |---|---|---|
-| Suivi des ouvertures d'email | Pixel transparent 1×1 | `/img/p.png?id=xxx`, `/track/open.gif` |
-| Suivi des clics sur les liens | Redirection 302 vers l'URL d'origine | `/r/abc123`, `/l/xxx`, `/link/xxx` |
-| **Suivi des téléchargements de pièces jointes** | Proxy inverse du flux de fichier | `/att/xxx.pdf`, `/attachment/file` |
+| `BACKEND_HOST` | `cf-track.laifa.xin` | Nom d'hôte du backend de suivi |
+| `BACKEND_PROTOCOL` | `http:` | Protocole backend (deux-points requis) |
+| `REDIRECT_TARGET` | `https://www.google.com` | Cible pour les requêtes rejetées |
 
-Les trois types **partagent la même logique de proxy inverse** — le suivi des pièces jointes fonctionne dès l'installation sans configuration supplémentaire. Le Worker transfère les requêtes vers votre backend ; votre backend enregistre l'événement et renvoie le fichier/pixel/302.
-
----
-
-## Configuration
-
-| Variable | Valeur par défaut | Description |
-|---|---|---|
-| `BACKEND_HOST` | `cf-track.laifa.xin` | Nom d'hôte du backend de suivi réel |
-| `BACKEND_PROTOCOL` | `http:` | Protocole backend, deux-points requis (`http:` ou `https:`) |
-| `REDIRECT_TARGET` | `https://www.google.com` | Cible de redirection pour les requêtes rejetées |
-
-Où les modifier :
-- **Cloudflare** : Workers Dashboard → Settings → Variables ; ou éditer `wrangler.jsonc` et redéployer
-- **Vercel** : Project → Settings → Environment Variables
-- **Netlify** : Site Settings → Environment Variables
-- **Deno Deploy** : Project Settings → Environment Variables
-
----
-
-## Liaison de domaine personnalisé
-
-Un déploiement est inutile sans liaison de votre propre sous-domaine. Voir **[docs/custom-domain.md](docs/custom-domain.fr.md)** (couvre les quatre plateformes).
-
----
-
-## Développement local (optionnel)
-
-### Cloudflare
-```bash
-npm install -g wrangler
-wrangler login
-wrangler dev      # local
-wrangler deploy   # déployer
-```
-
-### Vercel
-```bash
-cd vercel && npm install -g vercel
-vercel dev
-vercel --prod
-```
-
-### Netlify
-```bash
-npm install -g netlify-cli
-netlify dev
-netlify deploy --prod
-```
-
-### Deno Deploy
-```bash
-cd deno-deploy
-deno run --allow-net --allow-env main.js   # sert sur :8000
-# Déploiement via intégration GitHub (dash.deno.com/new), pas de CLI nécessaire
-```
-
----
-
-## Structure du dépôt
-
-```
-.
-├── src/index.js                       # Cloudflare Worker (ASN + repli IP)
-├── wrangler.jsonc                     # config Cloudflare
-├── vercel/
-│   ├── api/track.js                   # Vercel Edge Function (IP)
-│   ├── vercel.json
-│   ├── package.json
-│   └── README.md
-├── netlify.toml                       # config Netlify
-├── netlify/edge-functions/track.js    # Netlify Edge Function (IP)
-├── deno-deploy/
-│   ├── main.js                        # Deno Deploy (IP)
-│   └── README.md
-├── shared/microsoft-ranges.js         # plages IP Microsoft (source of truth)
-├── public/index.html                  # placeholder Netlify publish
-├── docs/custom-domain.md              # guide domaine personnalisé (4 plateformes)
-├── README.md                          # ce fichier
-└── LICENSE                            # MIT
-```
-
----
-
-## Modifier la liste blanche de chemins
-
-Pour étendre ou modifier la liste blanche de chemins, il faut synchroniser la constante `ALLOWED_PATH_PREFIXES` dans les **quatre** sources :
-
-- `src/index.js` (CF)
-- `vercel/api/track.js`
-- `netlify/edge-functions/track.js`
-- `deno-deploy/main.js`
-
-Après modification, un push déclenche le redéploiement automatique (CF nécessite un `wrangler deploy` manuel).
-
----
-
-## Mettre à jour les plages IP Microsoft
-
-`shared/microsoft-ranges.js` est la source of truth. Procédure de synchronisation :
-
-1. Récupérer les dernières données depuis [endpoints.office.com](https://endpoints.office.com/endpoints/worldwide) ou [bgpview.io/asn/8075](https://bgpview.io/asn/8075)
-2. Mettre à jour `MICROSOFT_IPV4_RANGES` dans `shared/microsoft-ranges.js`
-3. Répercuter dans la même constante des quatre sources
-4. Commit + push
-
-Rafraîchir tous les 3 à 6 mois. La détection ASN de CF n'est pas affectée ; les trois autres plateformes en dépendent.
-
----
-
-## Notes
-
-1. **Le backend par défaut est `cf-track.laifa.xin`** — c'est le backend de suivi de l'auteur du template. Vous pouvez :
-   - **Garder le défaut** : votre trafic passe par le backend de l'auteur (protocole HTTP par défaut, non chiffré)
-   - **Basculer vers le vôtre** : changer `BACKEND_HOST` vers votre backend de suivi
-2. **Backend HTTP** : par défaut `BACKEND_PROTOCOL=http:` car le backend de l'auteur utilise HTTP. Si le vôtre est HTTPS, mettez `https:`
-3. **Ne placez pas ce domaine sur un site web normal** — la liste blanche est très restrictive ; les requêtes web ordinaires seront redirigées en 302
-4. **Limites du palier gratuit** :
-   - CF Worker : 100 000 requêtes/jour
-   - Vercel : 100 Go de trafic/mois
-   - Netlify : 100 Go de trafic/mois
-   - Deno Deploy : 1 million de requêtes/mois
+L'UI de déploiement de chaque plateforme vous permet de confirmer ou modifier ces trois valeurs. Les défauts conviennent dans la plupart des cas.
 
 ---
 
@@ -237,6 +81,12 @@ MIT — voir [LICENSE](LICENSE).
 - 💬 WeChat (merci d'ajouter « email track » en remarque) :
 
 <img src="https://cos.files.maozhishi.com/data/web/web-files/wx/tony-apan.png" alt="WeChat de l'auteur" width="240">
+
+---
+
+## 🔧 Détails techniques
+
+Logique de filtrage en quatre niveaux, anti-scanner Microsoft Defender SafeLinks, flux de mise à jour des plages IP, développement local, organisation du code source, etc. → **[`docs/architecture.fr.md`](docs/architecture.fr.md)**
 
 ## Crédits
 

@@ -40,18 +40,12 @@ features:
 
 </div>
 
-<div style="text-align: center;">
+<p style="text-align: center;">
+<a href="https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; margin: 4px 6px; background: #F38020; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 15px;"><img src="https://cdn.simpleicons.org/cloudflare/white" width="18" height="18" alt="">Cloudflare</a>
+<a href="https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; margin: 4px 6px; background: #000; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 15px;"><img src="https://cdn.simpleicons.org/vercel/white" width="18" height="18" alt="">Vercel</a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; margin: 4px 6px; background: #00C7B7; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 15px;"><img src="https://cdn.simpleicons.org/netlify/white" width="18" height="18" alt="">Netlify</a>
+</p>
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain)
-&nbsp;&nbsp;
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host)
-&nbsp;&nbsp;
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain)
-
-</div>
-
-Or copy the template repo URL into any platform console (including Deno Deploy):
-
-```
-https://github.com/suxuemi/email-track-domain
-```
+<p style="text-align: center; margin-top: 32px;">
+<a href="/en/quick-start">Deploy to more platforms →</a>
+</p>

@@ -26,9 +26,9 @@ features:
   - icon: 📎
     title: 三種追蹤開箱即用
     details: 郵件開信 + 連結點擊 + 附件下載,零額外設定。
-  - icon: 🌍
-    title: 8 種語言文件
-    details: 簡中 / 繁中 / 英 / 日 / 法 / 德 / 西 / 葡,自動 i18n 切換。
+  - icon: 🚀
+    title: 全球邊緣加速
+    details: 4 個平台都是全球邊緣 CDN,毫秒級響應,不拖慢郵件像素載入。
   - icon: 🌐
     title: 專屬網域
     details: 用 track.yourdomain.com 替代共享網域,反垃圾郵件得分更高。

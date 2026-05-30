@@ -26,9 +26,9 @@ features:
   - icon: 📎
     title: Drei Tracking-Typen sofort einsatzbereit
     details: Öffnungen + Link-Klicks + Anhang-Downloads, ohne zusätzliche Konfiguration.
-  - icon: 🌍
-    title: Dokumentation in 8 Sprachen
-    details: 简中 / 繁中 / English / 日本語 / Français / Deutsch / Español / Português mit automatischem i18n.
+  - icon: 🚀
+    title: Globales Edge-CDN
+    details: Alle 4 Plattformen laufen auf globalen Edge-Netzwerken — Millisekunden-Antwortzeit, keine Verzögerung beim Laden von E-Mail-Pixeln.
   - icon: 🌐
     title: Ihre eigene Domain
     details: track.yourdomain.com statt geteilter Domain für bessere Anti-Spam-Reputation.

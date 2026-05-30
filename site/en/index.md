@@ -26,9 +26,9 @@ features:
   - icon: 📎
     title: Three tracking types out of the box
     details: Email opens + link clicks + attachment downloads, zero extra config.
-  - icon: 🌍
-    title: 8-language docs
-    details: 简中 / 繁中 / English / 日本語 / Français / Deutsch / Español / Português with auto i18n switching.
+  - icon: 🚀
+    title: Global edge CDN
+    details: All 4 platforms run on global edge networks — millisecond response, no email pixel loading lag.
   - icon: 🌐
     title: Your own domain
     details: Use track.yourdomain.com instead of a shared one — better anti-spam reputation.

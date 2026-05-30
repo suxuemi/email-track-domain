@@ -26,9 +26,9 @@ features:
   - icon: 📎
     title: 三种追踪开箱即用
     details: 邮件打开 + 链接点击 + 附件下载，零额外配置。
-  - icon: 🌍
-    title: 8 种语言文档
-    details: 简中 / 繁中 / 英 / 日 / 法 / 德 / 西 / 葡，自动 i18n 切换。
+  - icon: 🚀
+    title: 全球边缘加速
+    details: 4 个平台都是全球边缘 CDN，毫秒级响应，不拖慢邮件像素加载。
   - icon: 🌐
     title: 专属域名
     details: 用 track.yourdomain.com 替代共享域名，反垃圾邮件得分更高。

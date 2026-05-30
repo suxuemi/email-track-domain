@@ -26,9 +26,9 @@ features:
   - icon: 📎
     title: Três tipos de rastreamento prontos
     details: Aberturas + cliques em links + downloads de anexos, sem configuração adicional.
-  - icon: 🌍
-    title: Documentação em 8 idiomas
-    details: 简中 / 繁中 / English / 日本語 / Français / Deutsch / Español / Português com troca i18n automática.
+  - icon: 🚀
+    title: CDN edge global
+    details: As 4 plataformas usam redes edge globais — resposta em milissegundos, sem atraso de carregamento de pixels de email.
   - icon: 🌐
     title: Seu próprio domínio
     details: Use track.yourdomain.com em vez de um domínio compartilhado para melhor reputação anti-spam.

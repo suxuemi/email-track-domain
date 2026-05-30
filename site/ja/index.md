@@ -26,9 +26,9 @@ features:
   - icon: 📎
     title: 3 つの追跡タイプがすぐ使える
     details: メール開封 + リンククリック + 添付ファイルダウンロード、追加設定なし。
-  - icon: 🌍
-    title: 8 言語ドキュメント
-    details: 简中 / 繁中 / English / 日本語 / Français / Deutsch / Español / Português の自動 i18n 切り替え。
+  - icon: 🚀
+    title: グローバルエッジ CDN
+    details: 4 プラットフォームすべてがグローバルエッジ CDN — ミリ秒レスポンス、メールピクセル読み込み遅延なし。
   - icon: 🌐
     title: 専用ドメイン
     details: track.yourdomain.com で共有ドメインを置き換え、迷惑メール対策スコアが向上。

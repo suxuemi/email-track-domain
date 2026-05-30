@@ -26,9 +26,9 @@ features:
   - icon: 📎
     title: Tres tipos de seguimiento listos
     details: Aperturas + clics en enlaces + descargas de adjuntos, sin configuración adicional.
-  - icon: 🌍
-    title: Documentación en 8 idiomas
-    details: 简中 / 繁中 / English / 日本語 / Français / Deutsch / Español / Português con cambio i18n automático.
+  - icon: 🚀
+    title: CDN edge global
+    details: Las 4 plataformas usan redes edge globales — respuesta en milisegundos, sin retraso de carga de píxeles de email.
   - icon: 🌐
     title: Tu propio dominio
     details: Usa track.yourdomain.com en lugar de un dominio compartido para mejor reputación anti-spam.

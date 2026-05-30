@@ -4,7 +4,15 @@ Any-DNS CNAME + Deno-runtime Edge Function. On par with Vercel; pick whichever d
 
 ## One-click deploy
 
-Button on the home → [Quick Start →](/en/quick-start#_1-click-a-deploy-button-pick-one-platform)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain)
+
+Or paste this template repo URL into the Netlify console:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 Want to modify the code? [Fork it to your account](https://github.com/suxuemi/email-track-domain/fork) first, then use your fork's URL.
 
 ## Configuration
 

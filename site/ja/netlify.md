@@ -4,7 +4,15 @@
 
 ## ワンクリックデプロイ
 
-ボタンはホームの [クイックスタート →](/ja/quick-start#_1-deploy-ボタンを押す-プラットフォーム-1-つ選択) を参照。
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain)
+
+または、このテンプレートリポジトリ URL を Netlify コンソールに貼り付け:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 コードを変更したい?先に [自分のアカウントに fork](https://github.com/suxuemi/email-track-domain/fork) してから、fork したリポジトリ URL を使用してください。
 
 ## 設定項目
 

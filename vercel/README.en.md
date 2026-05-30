@@ -6,7 +6,15 @@ Full four-stage filtering. L2 anti-Microsoft Defender SafeLinks scanner uses IP-
 
 ## One-click deploy
 
-See the button at the repo root [README.en.md](../README.en.md).
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host)
+
+Or paste this template repo URL into Vercel:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 Want to modify the code? [Fork it to your account](https://github.com/suxuemi/email-track-domain/fork) first, then use your fork's URL.
 
 ## Configuration
 

@@ -6,7 +6,15 @@ Vollständige vierstufige Filterung. Der L2-Anti-Scanner für Microsoft Defender
 
 ## Ein-Klick-Deployment
 
-Den Button finden Sie im Repo-Root [README.de.md](../README.de.md).
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host)
+
+Oder fügen Sie diese Template-Repo-URL in Vercel ein:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 Möchten Sie den Code anpassen? [Forken Sie ihn zuerst in Ihr Konto](https://github.com/suxuemi/email-track-domain/fork) und verwenden Sie dann die URL Ihres Forks.
 
 ## Konfiguration
 

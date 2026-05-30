@@ -6,7 +6,15 @@ Filtrage à quatre niveaux complet. L'anti-scanner L2 Microsoft Defender SafeLin
 
 ## Déploiement en un clic
 
-Voir le bouton à la racine du dépôt [README.fr.md](../README.fr.md).
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host)
+
+Ou collez cette URL du dépôt template dans Vercel :
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 Vous voulez modifier le code ? [Forkez-le sur votre compte](https://github.com/suxuemi/email-track-domain/fork) d'abord, puis utilisez l'URL de votre fork.
 
 ## Configuration
 

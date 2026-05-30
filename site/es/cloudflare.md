@@ -4,7 +4,15 @@ La plataforma con **mayor precisión de anti-escáner L2** entre las cuatro (usa
 
 ## Despliegue en un clic
 
-Botón en la página de inicio → [Inicio rápido →](/es/quick-start#_1-hacer-clic-en-el-boton-deploy-elegir-una-plataforma)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain)
+
+O pega esta URL del repositorio plantilla en la consola Cloudflare:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 ¿Quieres modificar el código? [Hazle fork a tu cuenta](https://github.com/suxuemi/email-track-domain/fork) primero, luego usa la URL de tu fork.
 
 ## Configuración
 

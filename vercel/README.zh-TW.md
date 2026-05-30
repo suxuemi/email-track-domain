@@ -6,7 +6,15 @@
 
 ## 一鍵部署
 
-按鈕見倉庫根目錄 [README.zh-TW.md](../README.zh-TW.md)。
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host)
+
+或複製本範本倉庫 URL 到 Vercel:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 想自己改程式碼?先 [fork 到你的帳號](https://github.com/suxuemi/email-track-domain/fork),再用你 fork 後的倉庫 URL。
 
 ## 設定項
 

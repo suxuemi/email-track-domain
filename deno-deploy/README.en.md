@@ -4,12 +4,22 @@
 
 Deno Deploy doesn't have a URL-level "one-click deploy button", but its GitHub integration is nearly equivalent — set it up once, then push deploys automatically.
 
+## Template repo URL
+
+Copy this URL into the Deno Deploy console:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 Want to modify the code? [Fork it to your GitHub account](https://github.com/suxuemi/email-track-domain/fork) first, then connect Deno Deploy to your fork.
+
 ## Deployment steps
 
 1. Open [dash.deno.com/new](https://dash.deno.com/new)
 2. Sign in and pick **Deploy from GitHub repository**
 3. Authorize Deno Deploy to access your GitHub (first time)
-4. Select repository: `suxuemi/email-track-domain` (or your fork)
+4. Select repository (paste the URL above, or pick your fork)
 5. Configuration:
    - **Production branch**: `main`
    - **Entry point**: `deno-deploy/main.js`

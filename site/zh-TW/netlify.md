@@ -4,7 +4,15 @@
 
 ## 一鍵部署
 
-按鈕見首頁 [快速開始 →](/zh-TW/quick-start#_1-點-deploy-按鈕-選一個平台)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain)
+
+或複製本範本倉庫 URL 到 Netlify 主控台:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 想自己改程式碼?先 [fork 到你的帳號](https://github.com/suxuemi/email-track-domain/fork),再用你 fork 後的倉庫 URL。
 
 ## 設定項
 

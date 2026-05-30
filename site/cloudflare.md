@@ -4,7 +4,15 @@
 
 ## 一键部署
 
-按钮见首页 [快速开始 →](/quick-start#_1-点-deploy-按钮-选一个平台)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain)
+
+或复制本模板仓库 URL 到 Cloudflare 控制台：
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 想自己改代码？先 [fork 到你的账号](https://github.com/suxuemi/email-track-domain/fork)，再用你 fork 后的仓库 URL。
 
 ## 配置项
 

@@ -6,7 +6,15 @@
 
 ## ワンクリックデプロイ
 
-ボタンはリポジトリルートの [README.ja.md](../README.ja.md) を参照。
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host)
+
+または、このテンプレートリポジトリ URL を Vercel に貼り付け:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 コードを変更したい?先に [自分のアカウントに fork](https://github.com/suxuemi/email-track-domain/fork) してから、fork したリポジトリ URL を使用してください。
 
 ## 設定項目
 

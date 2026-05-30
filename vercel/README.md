@@ -6,7 +6,15 @@
 
 ## 一键部署
 
-按钮见仓库根目录 [README.md](../README.md)。
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host)
+
+或复制本模板仓库 URL 到 Vercel：
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 想自己改代码？先 [fork 到你的账号](https://github.com/suxuemi/email-track-domain/fork)，再用你 fork 后的仓库 URL。
 
 ## 配置项
 

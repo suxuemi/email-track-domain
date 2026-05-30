@@ -4,7 +4,15 @@
 
 ## ワンクリックデプロイ
 
-ボタンはホームの [クイックスタート →](/ja/quick-start#_1-deploy-ボタンを押す-プラットフォーム-1-つ選択) を参照。
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain)
+
+または、このテンプレートリポジトリ URL を Cloudflare コンソールに貼り付け:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 コードを変更したい?先に [自分のアカウントに fork](https://github.com/suxuemi/email-track-domain/fork) してから、fork したリポジトリ URL を使用してください。
 
 ## 設定項目
 

@@ -4,7 +4,15 @@ DNS quelconque via CNAME + Edge Function en Deno runtime. Au même niveau que Ve
 
 ## Déploiement en un clic
 
-Bouton sur la page d'accueil → [Démarrage rapide →](/fr/quick-start#_1-cliquer-sur-un-bouton-deploy-choisir-une-plateforme)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain)
+
+Ou collez cette URL du dépôt template dans la console Netlify :
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 Vous voulez modifier le code ? [Forkez-le sur votre compte](https://github.com/suxuemi/email-track-domain/fork) d'abord, puis utilisez l'URL de votre fork.
 
 ## Configuration
 

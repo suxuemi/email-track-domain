@@ -4,12 +4,22 @@
 
 Deno Deploy não tem um "botão de implantação em um clique" no nível de URL, mas sua integração com GitHub é quase equivalente — configure uma vez, depois cada push implanta automaticamente.
 
+## URL do repositório template
+
+Copie esta URL para o console do Deno Deploy:
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 Quer modificar o código? [Faça fork na sua conta do GitHub](https://github.com/suxuemi/email-track-domain/fork) primeiro, depois conecte o Deno Deploy ao seu fork.
+
 ## Passos de implantação
 
 1. Abrir [dash.deno.com/new](https://dash.deno.com/new)
 2. Fazer login e escolher **Deploy from GitHub repository**
 3. Autorizar o Deno Deploy a acessar seu GitHub (primeira vez)
-4. Selecionar repositório: `suxuemi/email-track-domain` (ou seu fork)
+4. Selecionar repositório (cole a URL acima, ou escolha seu fork)
 5. Configuração:
    - **Production branch**: `main`
    - **Entry point**: `deno-deploy/main.js`

@@ -4,12 +4,22 @@
 
 Deno Deploy 没有 URL 协议级别的"一键部署按钮"，但 GitHub 集成几乎等价 — 配一次后 push 自动部署。
 
+## 本模板仓库 URL
+
+复制以下 URL 到 Deno Deploy 控制台：
+
+```
+https://github.com/suxuemi/email-track-domain
+```
+
+> 💡 想自己改代码？先 [fork 到你的 GitHub 账号](https://github.com/suxuemi/email-track-domain/fork)，再连接 Deno Deploy 到你的 fork。
+
 ## 部署步骤
 
 1. 打开 [dash.deno.com/new](https://dash.deno.com/new)
 2. 登录后选 **Deploy from GitHub repository**
 3. 授权 Deno Deploy 访问你的 GitHub（首次）
-4. 选仓库：`suxuemi/email-track-domain`（或你 fork 后的仓库）
+4. 选仓库（粘贴上面的 URL，或选你 fork 后的仓库）
 5. 配置：
    - **Production branch**: `main`
    - **Entry point**: `deno-deploy/main.js`

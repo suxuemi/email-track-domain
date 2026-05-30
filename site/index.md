@@ -33,3 +33,25 @@ features:
     title: MIT 开源
     details: 源码完全开放，可改、可自部署、可商用。
 ---
+
+<div style="text-align: center; margin: 64px 0 32px;">
+
+## 🚀 一键部署到你喜欢的平台
+
+</div>
+
+<div style="text-align: center;">
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain)
+&nbsp;&nbsp;
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host)
+&nbsp;&nbsp;
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain)
+
+</div>
+
+或复制本模板仓库 URL 到任意平台控制台（含 Deno Deploy）：
+
+```
+https://github.com/suxuemi/email-track-domain
+```

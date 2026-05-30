@@ -33,3 +33,25 @@ features:
     title: MIT open source
     details: Código fuente totalmente abierto. Modificable, auto-alojable, uso comercial permitido.
 ---
+
+<div style="text-align: center; margin: 64px 0 32px;">
+
+## 🚀 Despliegue en un clic en tu plataforma favorita
+
+</div>
+
+<div style="text-align: center;">
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suxuemi/email-track-domain)
+&nbsp;&nbsp;
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/suxuemi/email-track-domain&root-directory=vercel&env=BACKEND_HOST,BACKEND_PROTOCOL,REDIRECT_TARGET&envDescription=Tracking+backend+host)
+&nbsp;&nbsp;
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/suxuemi/email-track-domain)
+
+</div>
+
+O copia la URL del repositorio plantilla en cualquier consola de plataforma (incluyendo Deno Deploy):
+
+```
+https://github.com/suxuemi/email-track-domain
+```

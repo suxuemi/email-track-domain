@@ -8,6 +8,7 @@ interface LocaleStrings {
   sidebar: {
     gettingStarted: string;
     home: string;
+    quickStart: string;
     customDomain: string;
     platforms: string;
     vercel: string;
@@ -22,7 +23,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     description: '邮件追踪域名一键部署 — 专属域名下的打开 / 点击 / 附件追踪反代',
     nav: { architecture: '架构', customDomain: '绑定域名' },
     sidebar: {
-      gettingStarted: '入门', home: '首页', customDomain: '绑定自定义域名',
+      gettingStarted: '入门', home: '首页', quickStart: '快速开始', customDomain: '绑定自定义域名',
       platforms: '平台部署', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
       technical: '技术', architecture: '架构与技术参考',
     },
@@ -31,7 +32,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     description: '郵件追蹤網域一鍵部署 — 專屬網域下的開信 / 點擊 / 附件追蹤反向代理',
     nav: { architecture: '架構', customDomain: '綁定網域' },
     sidebar: {
-      gettingStarted: '入門', home: '首頁', customDomain: '綁定自訂網域',
+      gettingStarted: '入門', home: '首頁', quickStart: '快速開始', customDomain: '綁定自訂網域',
       platforms: '平台部署', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
       technical: '技術', architecture: '架構與技術參考',
     },
@@ -40,7 +41,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     description: 'One-click email tracking domain reverse proxy — opens, clicks & attachments on your own domain',
     nav: { architecture: 'Architecture', customDomain: 'Custom Domain' },
     sidebar: {
-      gettingStarted: 'Getting Started', home: 'Home', customDomain: 'Bind a Custom Domain',
+      gettingStarted: 'Getting Started', home: 'Home', quickStart: 'Quick Start', customDomain: 'Bind a Custom Domain',
       platforms: 'Platforms', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
       technical: 'Technical', architecture: 'Architecture & Reference',
     },
@@ -49,7 +50,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     description: 'メール追跡ドメインのワンクリックデプロイ — 専用ドメインでの開封 / クリック / 添付追跡',
     nav: { architecture: 'アーキテクチャ', customDomain: 'カスタムドメイン' },
     sidebar: {
-      gettingStarted: 'はじめに', home: 'ホーム', customDomain: 'カスタムドメインのバインド',
+      gettingStarted: 'はじめに', home: 'ホーム', quickStart: 'クイックスタート', customDomain: 'カスタムドメインのバインド',
       platforms: 'プラットフォーム', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
       technical: '技術詳細', architecture: 'アーキテクチャと技術リファレンス',
     },
@@ -58,7 +59,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     description: 'Proxy inverse de domaine de suivi d\'email en un clic — ouvertures, clics et pièces jointes',
     nav: { architecture: 'Architecture', customDomain: 'Domaine personnalisé' },
     sidebar: {
-      gettingStarted: 'Démarrage', home: 'Accueil', customDomain: 'Lier un domaine personnalisé',
+      gettingStarted: 'Démarrage', home: 'Accueil', quickStart: 'Démarrage rapide', customDomain: 'Lier un domaine personnalisé',
       platforms: 'Plateformes', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
       technical: 'Technique', architecture: 'Architecture et référence',
     },
@@ -67,7 +68,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     description: 'Ein-Klick-Reverse-Proxy für E-Mail-Tracking-Domain — Öffnungen, Klicks und Anhänge',
     nav: { architecture: 'Architektur', customDomain: 'Eigene Domain' },
     sidebar: {
-      gettingStarted: 'Erste Schritte', home: 'Startseite', customDomain: 'Eigene Domain binden',
+      gettingStarted: 'Erste Schritte', home: 'Startseite', quickStart: 'Schnellstart', customDomain: 'Eigene Domain binden',
       platforms: 'Plattformen', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
       technical: 'Technisch', architecture: 'Architektur und Referenz',
     },
@@ -76,7 +77,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     description: 'Proxy inverso de dominio de seguimiento de email en un clic — aperturas, clics y adjuntos',
     nav: { architecture: 'Arquitectura', customDomain: 'Dominio personalizado' },
     sidebar: {
-      gettingStarted: 'Inicio', home: 'Inicio', customDomain: 'Vincular dominio personalizado',
+      gettingStarted: 'Inicio', home: 'Inicio', quickStart: 'Inicio rápido', customDomain: 'Vincular dominio personalizado',
       platforms: 'Plataformas', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
       technical: 'Técnico', architecture: 'Arquitectura y referencia',
     },
@@ -85,7 +86,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     description: 'Proxy reverso de domínio de rastreamento de email em um clique — aberturas, cliques e anexos',
     nav: { architecture: 'Arquitetura', customDomain: 'Domínio personalizado' },
     sidebar: {
-      gettingStarted: 'Começar', home: 'Início', customDomain: 'Vincular domínio personalizado',
+      gettingStarted: 'Começar', home: 'Início', quickStart: 'Início rápido', customDomain: 'Vincular domínio personalizado',
       platforms: 'Plataformas', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
       technical: 'Técnico', architecture: 'Arquitetura e referência',
     },
@@ -104,6 +105,7 @@ const themeForLocale = (lang: string, base: string): DefaultTheme.Config => {
         text: s.sidebar.gettingStarted,
         items: [
           { text: s.sidebar.home, link: `${base}` },
+          { text: s.sidebar.quickStart, link: `${base}quick-start` },
           { text: s.sidebar.customDomain, link: `${base}custom-domain` },
         ],
       },

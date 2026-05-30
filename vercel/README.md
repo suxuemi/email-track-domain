@@ -14,8 +14,6 @@
 https://github.com/suxuemi/email-track-domain
 ```
 
-> 💡 想自己改代码？先 [fork 到你的账号](https://github.com/suxuemi/email-track-domain/fork)，再用你 fork 后的仓库 URL。
-
 ## 配置项
 
 | 变量 | 默认 | 说明 |

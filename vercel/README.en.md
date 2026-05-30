@@ -14,8 +14,6 @@ Or paste this template repo URL into Vercel:
 https://github.com/suxuemi/email-track-domain
 ```
 
-> 💡 Want to modify the code? [Fork it to your account](https://github.com/suxuemi/email-track-domain/fork) first, then use your fork's URL.
-
 ## Configuration
 
 | Variable | Default | Description |

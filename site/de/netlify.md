@@ -12,8 +12,6 @@ Oder fügen Sie diese Template-Repo-URL in die Netlify-Konsole ein:
 https://github.com/suxuemi/email-track-domain
 ```
 
-> 💡 Möchten Sie den Code anpassen? [Forken Sie ihn zuerst in Ihr Konto](https://github.com/suxuemi/email-track-domain/fork) und verwenden Sie dann die URL Ihres Forks.
-
 ## Konfiguration
 
 | Variable | Standard | Beschreibung |

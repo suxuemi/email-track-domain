@@ -12,14 +12,12 @@ Deno Deploy には URL レベルの「ワンクリックデプロイボタン」
 https://github.com/suxuemi/email-track-domain
 ```
 
-> 💡 コードを変更したい?先に [自分の GitHub アカウントに fork](https://github.com/suxuemi/email-track-domain/fork) してから、Deno Deploy を自分の fork に接続してください。
-
 ## デプロイ手順
 
 1. [dash.deno.com/new](https://dash.deno.com/new) を開く
 2. サインインして **Deploy from GitHub repository** を選択
 3. Deno Deploy に GitHub へのアクセスを許可(初回のみ)
-4. リポジトリを選択(上記の URL を貼り付け、または fork したリポジトリを選択)
+4. リポジトリを選択 → 上記の URL を貼り付け
 5. 設定:
    - **Production branch**: `main`
    - **Entry point**: `deno-deploy/main.js`

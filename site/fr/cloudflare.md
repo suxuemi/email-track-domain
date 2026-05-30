@@ -12,8 +12,6 @@ Ou collez cette URL du dépôt template dans la console Cloudflare :
 https://github.com/suxuemi/email-track-domain
 ```
 
-> 💡 Vous voulez modifier le code ? [Forkez-le sur votre compte](https://github.com/suxuemi/email-track-domain/fork) d'abord, puis utilisez l'URL de votre fork.
-
 ## Configuration
 
 | Variable | Défaut | Description |

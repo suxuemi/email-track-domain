@@ -12,8 +12,6 @@
 https://github.com/suxuemi/email-track-domain
 ```
 
-> 💡 コードを変更したい?先に [自分のアカウントに fork](https://github.com/suxuemi/email-track-domain/fork) してから、fork したリポジトリ URL を使用してください。
-
 ## 設定項目
 
 | 変数 | デフォルト | 説明 |

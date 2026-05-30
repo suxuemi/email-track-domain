@@ -12,14 +12,12 @@ Copia esta URL en la consola de Deno Deploy:
 https://github.com/suxuemi/email-track-domain
 ```
 
-> 💡 ¿Quieres modificar el código? [Hazle fork a tu cuenta de GitHub](https://github.com/suxuemi/email-track-domain/fork) primero, luego conecta Deno Deploy a tu fork.
-
 ## Pasos de despliegue
 
 1. Abrir [dash.deno.com/new](https://dash.deno.com/new)
 2. Iniciar sesión y elegir **Deploy from GitHub repository**
 3. Autorizar a Deno Deploy a acceder a tu GitHub (primera vez)
-4. Seleccionar repositorio (pega la URL anterior, o elige tu fork)
+4. Seleccionar repositorio → pega la URL anterior
 5. Configuración:
    - **Production branch**: `main`
    - **Entry point**: `deno-deploy/main.js`

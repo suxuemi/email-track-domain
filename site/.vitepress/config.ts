@@ -11,7 +11,9 @@ interface LocaleStrings {
     quickStart: string;
     customDomain: string;
     platforms: string;
+    cloudflare: string;
     vercel: string;
+    netlify: string;
     denoDeploy: string;
     technical: string;
     architecture: string;
@@ -24,7 +26,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     nav: { architecture: '架构', customDomain: '绑定域名' },
     sidebar: {
       gettingStarted: '入门', home: '首页', quickStart: '快速开始', customDomain: '绑定自定义域名',
-      platforms: '平台部署', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
+      platforms: '平台部署', cloudflare: 'Cloudflare Workers', vercel: 'Vercel', netlify: 'Netlify', denoDeploy: 'Deno Deploy',
       technical: '技术', architecture: '架构与技术参考',
     },
   },
@@ -33,7 +35,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     nav: { architecture: '架構', customDomain: '綁定網域' },
     sidebar: {
       gettingStarted: '入門', home: '首頁', quickStart: '快速開始', customDomain: '綁定自訂網域',
-      platforms: '平台部署', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
+      platforms: '平台部署', cloudflare: 'Cloudflare Workers', vercel: 'Vercel', netlify: 'Netlify', denoDeploy: 'Deno Deploy',
       technical: '技術', architecture: '架構與技術參考',
     },
   },
@@ -42,7 +44,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     nav: { architecture: 'Architecture', customDomain: 'Custom Domain' },
     sidebar: {
       gettingStarted: 'Getting Started', home: 'Home', quickStart: 'Quick Start', customDomain: 'Bind a Custom Domain',
-      platforms: 'Platforms', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
+      platforms: 'Platforms', cloudflare: 'Cloudflare Workers', vercel: 'Vercel', netlify: 'Netlify', denoDeploy: 'Deno Deploy',
       technical: 'Technical', architecture: 'Architecture & Reference',
     },
   },
@@ -51,7 +53,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     nav: { architecture: 'アーキテクチャ', customDomain: 'カスタムドメイン' },
     sidebar: {
       gettingStarted: 'はじめに', home: 'ホーム', quickStart: 'クイックスタート', customDomain: 'カスタムドメインのバインド',
-      platforms: 'プラットフォーム', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
+      platforms: 'プラットフォーム', cloudflare: 'Cloudflare Workers', vercel: 'Vercel', netlify: 'Netlify', denoDeploy: 'Deno Deploy',
       technical: '技術詳細', architecture: 'アーキテクチャと技術リファレンス',
     },
   },
@@ -60,7 +62,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     nav: { architecture: 'Architecture', customDomain: 'Domaine personnalisé' },
     sidebar: {
       gettingStarted: 'Démarrage', home: 'Accueil', quickStart: 'Démarrage rapide', customDomain: 'Lier un domaine personnalisé',
-      platforms: 'Plateformes', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
+      platforms: 'Plateformes', cloudflare: 'Cloudflare Workers', vercel: 'Vercel', netlify: 'Netlify', denoDeploy: 'Deno Deploy',
       technical: 'Technique', architecture: 'Architecture et référence',
     },
   },
@@ -69,7 +71,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     nav: { architecture: 'Architektur', customDomain: 'Eigene Domain' },
     sidebar: {
       gettingStarted: 'Erste Schritte', home: 'Startseite', quickStart: 'Schnellstart', customDomain: 'Eigene Domain binden',
-      platforms: 'Plattformen', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
+      platforms: 'Plattformen', cloudflare: 'Cloudflare Workers', vercel: 'Vercel', netlify: 'Netlify', denoDeploy: 'Deno Deploy',
       technical: 'Technisch', architecture: 'Architektur und Referenz',
     },
   },
@@ -78,7 +80,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     nav: { architecture: 'Arquitectura', customDomain: 'Dominio personalizado' },
     sidebar: {
       gettingStarted: 'Inicio', home: 'Inicio', quickStart: 'Inicio rápido', customDomain: 'Vincular dominio personalizado',
-      platforms: 'Plataformas', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
+      platforms: 'Plataformas', cloudflare: 'Cloudflare Workers', vercel: 'Vercel', netlify: 'Netlify', denoDeploy: 'Deno Deploy',
       technical: 'Técnico', architecture: 'Arquitectura y referencia',
     },
   },
@@ -87,7 +89,7 @@ const STRINGS: Record<string, LocaleStrings> = {
     nav: { architecture: 'Arquitetura', customDomain: 'Domínio personalizado' },
     sidebar: {
       gettingStarted: 'Começar', home: 'Início', quickStart: 'Início rápido', customDomain: 'Vincular domínio personalizado',
-      platforms: 'Plataformas', vercel: 'Vercel', denoDeploy: 'Deno Deploy',
+      platforms: 'Plataformas', cloudflare: 'Cloudflare Workers', vercel: 'Vercel', netlify: 'Netlify', denoDeploy: 'Deno Deploy',
       technical: 'Técnico', architecture: 'Arquitetura e referência',
     },
   },
@@ -112,7 +114,9 @@ const themeForLocale = (lang: string, base: string): DefaultTheme.Config => {
       {
         text: s.sidebar.platforms,
         items: [
+          { text: s.sidebar.cloudflare, link: `${base}cloudflare` },
           { text: s.sidebar.vercel, link: `${base}vercel` },
+          { text: s.sidebar.netlify, link: `${base}netlify` },
           { text: s.sidebar.denoDeploy, link: `${base}deno-deploy` },
         ],
       },

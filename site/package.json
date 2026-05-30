@@ -1,0 +1,16 @@
+{
+  "name": "email-track-domain-docs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "VitePress docs site for email-track-domain. Reads source from repo root .lang.md files via scripts/sync-docs.sh.",
+  "scripts": {
+    "docs:sync": "bash scripts/sync-docs.sh",
+    "docs:dev": "npm run docs:sync && vitepress dev .",
+    "docs:build": "npm run docs:sync && vitepress build .",
+    "docs:preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.0"
+  }
+}

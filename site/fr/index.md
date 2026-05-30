@@ -7,14 +7,11 @@ hero:
   tagline: "Proxy inverse pour ouvertures / clics / pièces jointes sur votre propre domaine"
   actions:
     - theme: brand
-      text: Commencer →
+      text: Déployer en un clic →
       link: /fr/quick-start
     - theme: alt
-      text: Architecture
-      link: /fr/architecture
-    - theme: alt
-      text: GitHub
-      link: https://github.com/suxuemi/email-track-domain
+      text: Domaine personnalisé
+      link: /fr/custom-domain
 
 features:
   - icon: ⚡

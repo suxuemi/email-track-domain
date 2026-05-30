@@ -7,14 +7,11 @@ hero:
   tagline: "在你专属域名下提供邮件打开 / 点击 / 附件追踪反代"
   actions:
     - theme: brand
-      text: 立即开始 →
+      text: 一键部署 →
       link: /quick-start
     - theme: alt
-      text: 查看技术架构
-      link: /architecture
-    - theme: alt
-      text: GitHub
-      link: https://github.com/suxuemi/email-track-domain
+      text: 绑定域名
+      link: /custom-domain
 
 features:
   - icon: ⚡

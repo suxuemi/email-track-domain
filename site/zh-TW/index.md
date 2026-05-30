@@ -7,14 +7,11 @@ hero:
   tagline: "在你專屬網域下提供郵件開信 / 點擊 / 附件追蹤反向代理"
   actions:
     - theme: brand
-      text: 立即開始 →
+      text: 一鍵部署 →
       link: /zh-TW/quick-start
     - theme: alt
-      text: 查看技術架構
-      link: /zh-TW/architecture
-    - theme: alt
-      text: GitHub
-      link: https://github.com/suxuemi/email-track-domain
+      text: 綁定網域
+      link: /zh-TW/custom-domain
 
 features:
   - icon: ⚡

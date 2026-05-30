@@ -7,14 +7,11 @@ hero:
   tagline: "専用ドメインでの開封 / クリック / 添付追跡リバースプロキシ"
   actions:
     - theme: brand
-      text: 今すぐ始める →
+      text: ワンクリックデプロイ →
       link: /ja/quick-start
     - theme: alt
-      text: アーキテクチャ
-      link: /ja/architecture
-    - theme: alt
-      text: GitHub
-      link: https://github.com/suxuemi/email-track-domain
+      text: カスタムドメイン
+      link: /ja/custom-domain
 
 features:
   - icon: ⚡

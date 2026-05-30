@@ -7,14 +7,11 @@ hero:
   tagline: "Reverse proxy for opens / clicks / attachments on your own domain"
   actions:
     - theme: brand
-      text: Get Started →
+      text: One-click Deploy →
       link: /en/quick-start
     - theme: alt
-      text: Architecture
-      link: /en/architecture
-    - theme: alt
-      text: GitHub
-      link: https://github.com/suxuemi/email-track-domain
+      text: Custom Domain
+      link: /en/custom-domain
 
 features:
   - icon: ⚡

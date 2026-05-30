@@ -25,6 +25,8 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
-# macOS auto-duplicated files (Finder "duplicate" naming)
-* 2.md
-**/* 2.md
+# macOS auto-duplicated files (Finder "duplicate" naming, e.g. "foo 2.md", "foo 10.md")
+* [0-9].md
+**/* [0-9].md
+* [0-9][0-9].md
+**/* [0-9][0-9].md

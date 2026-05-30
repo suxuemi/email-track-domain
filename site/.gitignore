@@ -24,3 +24,7 @@ deno-deploy.md
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# macOS auto-duplicated files (Finder "duplicate" naming)
+* 2.md
+**/* 2.md
